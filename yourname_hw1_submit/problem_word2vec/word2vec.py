@@ -51,24 +51,98 @@ def create_skipgram_data(tokens, window_size, word_to_ix):
     return data
 
 class Word2Vec(nn.Module):
-    # TODO: 1. Implement the Word2Vec model with two embedding layers
-    pass
+    # 1. Word2Vec model with separate center and outside embedding layers.
+    def __init__(self, vocab_size, embedding_dim):
+        super().__init__()
+        self.in_embed = nn.Embedding(vocab_size, embedding_dim)
+        self.out_embed = nn.Embedding(vocab_size, embedding_dim)
+
+        # A small random initialization for center vectors and zero initialization
+        # for outside vectors are commonly used for skip-gram Word2Vec.
+        bound = 0.5 / embedding_dim
+        nn.init.uniform_(self.in_embed.weight, -bound, bound)
+        nn.init.zeros_(self.out_embed.weight)
+
+    def forward(self, center_indices, outside_indices):
+        center_vectors = self.in_embed(center_indices)
+        outside_vectors = self.out_embed(outside_indices)
+
+        # For K negative samples, broadcast the single center vector across the
+        # K outside vectors. For a positive pair, both tensors are already 2-D.
+        if outside_vectors.dim() == center_vectors.dim() + 1:
+            center_vectors = center_vectors.unsqueeze(1)
+
+        return (center_vectors * outside_vectors).sum(dim=-1)
 
 class NegativeSampler:
-    # TODO: 3. Implement negative sampling
-    pass
+    # 3. Draw non-context words from the smoothed unigram distribution.
+    def __init__(self, word_counts, word_to_ix=None, power=0.75):
+        # word_to_ix is optional so the sampler remains compatible with the
+        # original one-argument constructor in the provided template.
+        if word_to_ix is None:
+            words = ['<unk>'] + [word for word in word_counts if word != '<unk>']
+            word_to_ix = {word: i for i, word in enumerate(words)}
+
+        self.word_to_ix = word_to_ix
+        probabilities = torch.zeros(len(word_to_ix), dtype=torch.float)
+        for word, count in word_counts.items():
+            if word in word_to_ix:
+                probabilities[word_to_ix[word]] = float(count) ** power
+
+        # <unk> is not used as a positive training word, so do not sample it as
+        # a negative word either.
+        if '<unk>' in word_to_ix:
+            probabilities[word_to_ix['<unk>']] = 0.0
+
+        if probabilities.sum() == 0:
+            raise ValueError("Cannot sample negatives from an empty vocabulary")
+        self.probabilities = probabilities / probabilities.sum()
+
+    def get_negative_samples(self, context_word_idx, k):
+        if k < 0:
+            raise ValueError("k must be non-negative")
+        if not 0 <= context_word_idx < len(self.probabilities):
+            raise IndexError("context_word_idx is outside the vocabulary")
+        if k == 0:
+            return torch.empty(0, dtype=torch.long)
+
+        # The true context word must not appear among the negative samples.
+        probabilities = self.probabilities.clone()
+        probabilities[context_word_idx] = 0.0
+        total_probability = probabilities.sum()
+        if total_probability == 0:
+            raise ValueError("No non-context word is available for negative sampling")
+
+        probabilities /= total_probability
+        return torch.multinomial(probabilities, k, replacement=True)
 
 def train(model, training_data, optimizer, loss_fn, epochs, negative_sampler, k_negative_samples=5):
+    device = next(model.parameters()).device
     for epoch in range(epochs):
         total_loss = 0
         random.shuffle(training_data)
         progress_bar = tqdm(training_data, desc=f"Epoch {epoch + 1}/{epochs}")
         for i, (center_word_idx, context_word_idx) in enumerate(progress_bar):
-            center_tensor = torch.tensor([center_word_idx], dtype=torch.long)
-            neg_sample_indices = negative_sampler.get_negative_samples(context_word_idx, k_negative_samples)
+            center_tensor = torch.tensor([center_word_idx], dtype=torch.long, device=device)
+            context_tensor = torch.tensor([context_word_idx], dtype=torch.long, device=device)
+            neg_sample_indices = negative_sampler.get_negative_samples(
+                context_word_idx, k_negative_samples
+            ).to(device)
 
-            # TODO: 4. Train the model using negative sampling
-            
+            # 4. Optimize the positive pair and its K negative pairs together.
+            optimizer.zero_grad()
+
+            positive_scores = model(center_tensor, context_tensor)
+            negative_scores = model(center_tensor, neg_sample_indices)
+
+            positive_loss = loss_fn(positive_scores, torch.ones_like(positive_scores))
+            negative_loss = loss_fn(negative_scores, torch.zeros_like(negative_scores))
+            loss = positive_loss + negative_loss
+
+            loss.backward()
+            optimizer.step()
+            total_loss += loss.item()
+
 
             if i % 1000 == 0:
                 progress_bar.set_postfix({'loss': f'{total_loss / (i + 1):.4f}'})
@@ -77,7 +151,7 @@ def train(model, training_data, optimizer, loss_fn, epochs, negative_sampler, k_
             print(f"Epoch {epoch + 1}/{epochs}, Loss: {total_loss / len(training_data):.4f}")
 
 def visualize_embeddings(model, ix_to_word):
-    embeddings = model.in_embed.weight.data.cpu().numpy()
+    embeddings = model.in_embed.weight.detach().cpu().numpy()
     pca = PCA(n_components=2)
     result = pca.fit_transform(embeddings)
     
@@ -111,9 +185,11 @@ if __name__== "__main__":
     K_NEGATIVE_SAMPLES = 5
 
     model = Word2Vec(vocab_size, EMBEDDING_DIM)
-    loss_fn = None # TODO: 2. Define the loss function
+    # 2. Summing over the K negative examples
+    # matches Eq. (8) in the assignment.
+    loss_fn = nn.BCEWithLogitsLoss(reduction='sum')
     optimizer = optim.AdamW(model.parameters(), lr=LEARNING_RATE)
-    negative_sampler = NegativeSampler(word_counts)
+    negative_sampler = NegativeSampler(word_counts, word_to_ix)
 
     # train(model, training_data, optimizer, loss_fn, EPOCHS)
     train(model, training_data, optimizer, loss_fn, EPOCHS, negative_sampler, K_NEGATIVE_SAMPLES)
