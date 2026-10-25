@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
+    <meta name="title" content="Repository browse - Arquivo Histórico do Inep" />
+<meta name="description" content="Acervo Arquivístico do Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>Repository browse - Arquivo Histórico do Inep</title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link media="all" href="/plugins/arDominionPlugin/css/main.css" rel="stylesheet" type="text/css" />
+            <script src="/vendor/jquery.js" type="text/javascript"></script>
+<script src="/plugins/sfDrupalPlugin/vendor/drupal/misc/drupal.js" type="text/javascript"></script>
+<script src="/vendor/yui/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+<script src="/vendor/yui/element/element-min.js" type="text/javascript"></script>
+<script src="/vendor/yui/button/button-min.js" type="text/javascript"></script>
+<script src="/vendor/modernizr.js" type="text/javascript"></script>
+<script src="/vendor/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/vendor/jquery.expander.js" type="text/javascript"></script>
+<script src="/vendor/jquery.masonry.js" type="text/javascript"></script>
+<script src="/vendor/jquery.imagesloaded.js" type="text/javascript"></script>
+<script src="/vendor/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<script src="/vendor/URI.js" type="text/javascript"></script>
+<script src="/vendor/meetselva/attrchange.js" type="text/javascript"></script>
+<script src="/js/qubit.js" type="text/javascript"></script>
+<script src="/js/treeView.js" type="text/javascript"></script>
+<script src="/js/clipboard.js" type="text/javascript"></script>
+<script src="/plugins/sfDrupalPlugin/vendor/drupal/misc/tableheader.js" type="text/javascript"></script>
+<script src="/js/advancedRepositoryFilters.js" type="text/javascript"></script>
+<script src="/js/dominion.js" type="text/javascript"></script>
+  </head>
+  <body class="yui-skin-sam repository browse">
+
+    
+    
+
+
+
+<header id="top-bar">
+
+      <a id="logo" rel="home" href="/index.php/" title=""><img alt="AtoM" src="/images/logo.png" /></a>  
+      <h1 id="site-name">
+      <a rel="home" title="Home" href="/index.php/"><span>Arquivo Histórico do Inep</span></a>    </h1>
+  
+  <div id="search-bar">
+
+    <div id="browse-menu">
+
+  <button class="top-item top-dropdown" data-toggle="dropdown" data-target="#" aria-expanded="false">Browse</button>
+
+  <div class="top-dropdown-container top-dropdown-container-right">
+
+    <div class="top-dropdown-arrow">
+      <div class="arrow"></div>
+    </div>
+
+    <div class="top-dropdown-header">
+      <h2>Browse</h2>
+    </div>
+
+    <div class="top-dropdown-body">
+      <ul>
+        <li class="leaf" id="node_browseInformationObjects"><a href="/index.php/informationobject/browse" title="Archival descriptions">Archival descriptions</a></li><li class="leaf" id="node_browseActors"><a href="/index.php/actor/browse" title="Authority records">Authority records</a></li><li class="leaf" id="node_browseRepositories"><a href="/index.php/repository/browse" title="Archival institutions">Archival institutions</a></li><li class="leaf" id="node_browseFunctions"><a href="/index.php/function/browse" title="Functions">Functions</a></li><li class="leaf" id="node_browseSubjects"><a href="/index.php/taxonomy/index/id/35" title="Subjects">Subjects</a></li><li class="leaf" id="node_browseDigitalObjects"><a href="/index.php/informationobject/browse?view=card&amp;onlyMedia=1&amp;topLod=0" title="Digital objects">Digital objects</a></li><li class="leaf" id="node_browsePlaces"><a href="/index.php/taxonomy/index/id/42" title="Places">Places</a></li>      </ul>
+    </div>
+
+    <div class="top-dropdown-bottom"></div>
+
+  </div>
+
+</div>
+
+    <div id="search-form-wrapper" role="search">
+
+  <h2>Search</h2>
+
+  <form action="/index.php/informationobject/browse" data-autocomplete="/index.php/search/autocomplete" autocomplete="off">
+
+    <input type="hidden" name="topLod" value="0"/>
+    <input type="hidden" name="sort" value="relevance"/>
+
+    <input type="text" name="query" aria-label="Search" value="" placeholder="Search"/>
+
+    <button aria-label="Search"></button>
+
+    <div id="search-realm" class="search-popover">
+
+      
+        <div>
+          <label>
+              <input name="repos" type="radio" value checked="checked" data-placeholder="Search">
+            Global search          </label>
+        </div>
+
+        
+        
+      
+      <div class="search-realm-advanced">
+        <a href="/index.php/informationobject/browse?showAdvanced=1&topLod=0">
+          Advanced search&nbsp;&raquo;
+        </a>
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
+
+  </div>
+
+  <nav>
+
+    
+  <div id="user-menu">
+    <button class="top-item top-dropdown" data-toggle="dropdown" data-target="#"
+      aria-expanded="false">
+        Log in    </button>
+
+    <div class="top-dropdown-container">
+
+      <div class="top-dropdown-arrow">
+        <div class="arrow"></div>
+      </div>
+
+      <div class="top-dropdown-header">
+        <h2>Have an account?</h2>
+      </div>
+
+      <div class="top-dropdown-body">
+
+        <form action="/index.php/user/login" method="post">
+          <input type="hidden" name="_csrf_token" value="6d1f714db49932337626f4859bc18efa" id="csrf_token" /><input type="hidden" name="next" value="http://arquivohistorico.inep.gov.br/index.php/repository/browse?sf_culture=en&amp;view=card&amp;sort=nameUp&amp;regions=Distrito+Federal&amp;locality=null&amp;thematicAreas=&amp;sortDir=asc" id="next" />
+          <div class="form-item form-item-email">
+  <label for="email">Email <span class="form-required" title="This field is required.">*</span></label>
+  <input type="text" name="email" id="email" />
+  
+</div>
+
+          <div class="form-item form-item-password">
+  <label for="password">Password <span class="form-required" title="This field is required.">*</span></label>
+  <input type="password" name="password" autocomplete="off" id="password" />
+  
+</div>
+
+          <button type="submit">Log in</button>
+
+        </form>
+
+      </div>
+
+      <div class="top-dropdown-bottom"></div>
+
+    </div>
+  </div>
+
+
+    <div id="quick-links-menu" data-toggle="tooltip" data-title="Quick links">
+
+  <button class="top-item" data-toggle="dropdown" data-target="#" aria-expanded="false">Quick links</button>
+
+  <div class="top-dropdown-container">
+
+    <div class="top-dropdown-arrow">
+      <div class="arrow"></div>
+    </div>
+
+    <div class="top-dropdown-header">
+      <h2>Quick links</h2>
+    </div>
+
+    <div class="top-dropdown-body">
+      <ul>
+                              <li><a href="/index.php/" title="Home">Home</a></li>
+                                        <li><a href="/index.php/about" title="About">About</a></li>
+                                        <li><a href="http://docs.accesstomemory.org/" title="Help">Help</a></li>
+                                                                                              <li><a href="/index.php/privacy" title="Privacy Policy">Privacy Policy</a></li>
+                        </ul>
+    </div>
+
+    <div class="top-dropdown-bottom"></div>
+
+  </div>
+
+</div>
+
+          <div id="language-menu" data-toggle="tooltip" data-title="Language">
+
+  <button class="top-item" data-toggle="dropdown" data-target="#" aria-expanded="false">Language</button>
+
+  <div class="top-dropdown-container">
+
+    <div class="top-dropdown-arrow">
+      <div class="arrow"></div>
+    </div>
+
+    <div class="top-dropdown-header">
+      <h2>Language</h2>
+    </div>
+
+    <div class="top-dropdown-body">
+      <ul>
+                  <li class="active">
+            <a href="/index.php/repository/browse?sf_culture=en&amp;view=card&amp;sort=nameUp&amp;regions=Distrito+Federal&amp;locality=null&amp;thematicAreas=&amp;sortDir=asc" title="English">English</a>          </li>
+                  <li>
+            <a href="/index.php/repository/browse?sf_culture=pt_BR&amp;view=card&amp;sort=nameUp&amp;regions=Distrito+Federal&amp;locality=null&amp;thematicAreas=&amp;sortDir=asc" title="Português do Brasil">Português do Brasil</a>          </li>
+              </ul>
+    </div>
+
+    <div class="top-dropdown-bottom"></div>
+
+  </div>
+
+</div>
+    
+    <div id="clipboard-menu"
+  data-toggle="tooltip"
+  data-title="Clipboard"
+  data-load-alert-message="There was an error loading the clipboard content."
+  data-export-alert-message="The clipboard is empty for this entity type."
+  data-export-check-url="/index.php/clipboard/exportCheck"
+  data-delete-alert-message="Note: clipboard items unclipped in this page will be removed from the clipboard when the page is refreshed. You can re-select them now, or reload the page to remove them completely. Using the sort or print preview buttons will also cause a page reload - so anything currently deselected will be lost!">
+
+  <button class="top-item" data-toggle="dropdown" data-target="#" aria-expanded="false">
+    Clipboard  </button>
+
+  <div class="top-dropdown-container">
+
+    <div class="top-dropdown-arrow">
+      <div class="arrow"></div>
+    </div>
+
+    <div class="top-dropdown-header">
+      <h2>Clipboard</h2>
+      <span id="count-block" data-information-object-label="Archival description" data-actor-object-label="Authority record" data-repository-object-label="Archival institution"></span>
+    </div>
+
+    <div class="top-dropdown-body">
+      <ul>
+        <li class="leaf" id="node_clearClipboard"><a href="/index.php/" title="Clear all selections">Clear all selections</a></li><li class="leaf" id="node_goToClipboard"><a href="/index.php/clipboard/view" title="Go to clipboard">Go to clipboard</a></li><li class="leaf" id="node_loadClipboard"><a href="/index.php/clipboard/load" title="Load clipboard">Load clipboard</a></li><li class="leaf" id="node_saveClipboard"><a href="/index.php/clipboard/save" title="Save clipboard">Save clipboard</a></li>      </ul>
+    </div>
+
+    <div class="top-dropdown-bottom"></div>
+
+  </div>
+
+</div>
+
+    
+  </nav>
+
+  
+</header>
+
+  <div id="site-slogan">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <span>Acervo Arquivístico do Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <div id="wrapper" class="container" role="main">
+
+              
+      <div class="row">
+
+        <div class="span3">
+
+          <div id="sidebar">
+
+            
+  <section id="facets">
+
+    <div class="visible-phone facets-header">
+      <a class="x-btn btn-wide">
+        <i class="fa fa-filter"></i>
+        Filters      </a>
+    </div>
+
+    <div class="content">
+
+      <h2>Narrow your results by:</h2>
+
+        
+        
+        
+        
+        
+        
+    </div>
+
+  </section>
+
+
+          </div>
+
+        </div>
+
+        <div class="span9">
+
+          <div id="main-column">
+
+              <div class="multiline-header">
+    <img alt="" src="/images/icons-large/icon-institutions.png" />    <h1 aria-describedby="results-label">Showing 0 results</h1>
+    <span class="sub" id="results-label">Archival institution</span>
+  </div>
+
+            
+  <section class="browse-options">
+    <div class="row">
+      <div class="span4">
+        <div class="inline-search" role="search" aria-label="Archival institution">
+
+  <form method="get" action="/index.php/repository/browse?view=card">
+
+    
+          <input type="hidden" name="view" value="card"/>
+    
+    <div class="input-prepend input-append">
+
+      
+              <input type="text" name="subquery" aria-label="Search archival institution" placeholder="Search archival institution" />
+      
+      <div class="btn-group">
+        <button class="btn" type="submit" aria-label="Search">
+          <i aria-hidden="true" class="fa fa-search"></i>
+        </button>
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
+      </div>
+
+      <span class="view-header-label">View:</span>
+
+<div class="btn-group">
+  <a class="btn fa fa-th-large active" aria-label="Card view" href="/index.php/repository/browse?view=card&amp;sf_culture=en&amp;sort=nameUp&amp;regions=Distrito+Federal&amp;locality=null&amp;thematicAreas=&amp;sortDir=asc" title=" "> </a>
+  <a class="btn fa fa-list " aria-label="Table view" href="/index.php/repository/browse?view=table&amp;sf_culture=en&amp;sort=nameUp&amp;regions=Distrito+Federal&amp;locality=null&amp;thematicAreas=&amp;sortDir=asc" title=" "> </a></div>
+
+      <div class="pickers">
+        <div id="sort-header">
+  <div class="sort-options">
+
+    <label>Sort by:</label>
+
+    <div class="dropdown">
+
+      <div class="dropdown-selected">
+                                  <span>Date modified</span>
+        
+      </div>
+
+      <ul class="dropdown-options">
+
+        <span class="pointer"></span>
+
+                  <li>
+                        <a href="/index.php/repository/browse?sort=alphabetic&sf_culture=en&view=card&regions=Distrito+Federal&locality=null&thematicAreas=&sortDir=asc" data-order="alphabetic">
+              <span>Name</span>
+            </a>
+          </li>
+                  <li>
+                        <a href="/index.php/repository/browse?sort=identifier&sf_culture=en&view=card&regions=Distrito+Federal&locality=null&thematicAreas=&sortDir=asc" data-order="identifier">
+              <span>Identifier</span>
+            </a>
+          </li>
+              </ul>
+    </div>
+  </div>
+</div>
+
+<div id="sort-header">
+  <div class="sort-options">
+
+    <label>Direction:</label>
+
+    <div class="dropdown">
+
+      <div class="dropdown-selected">
+                                  <span>Ascending</span>
+                  
+      </div>
+
+      <ul class="dropdown-options">
+
+        <span class="pointer"></span>
+
+                  <li>
+                        <a href="/index.php/repository/browse?sortDir=desc&sf_culture=en&view=card&sort=nameUp&regions=Distrito+Federal&locality=null&thematicAreas=" data-order="desc">
+              <span>Descending</span>
+            </a>
+          </li>
+              </ul>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="advanced-search-section" role="search" aria-label="Advanced Archival institution">
+    <a href="#" id="toggle-advanced-filters" class="advanced-search-toggle">Advanced search options</a>
+    <div id="advanced-repository-filters" class="advanced-search">
+      <form method="get">
+
+      <input type="hidden" name="view" value="card"/>
+      <input type="hidden" name="sort" value="nameUp"/>
+      <input type="hidden" name="locality" value="null"/>
+  
+  <div class="advanced-repository-filters-content">
+
+    <div class="row-fluid">
+      <div class="span4">
+        <label for="thematicAreas">Thematic area:</label>
+        <select name="thematicAreas" id="thematicAreas">
+          <option selected="selected"></option>
+                      <option value="348">
+              Environment            </option>
+                      <option value="349">
+              Family / Domestic Life            </option>
+                      <option value="351">
+              Geography            </option>
+                      <option value="360">
+              Recreation / Leisure / Sports            </option>
+                      <option value="363">
+              Social Organizations and Activities            </option>
+                      <option value="364">
+              Transportation            </option>
+                      <option value="344">
+              Agriculture            </option>
+                      <option value="355">
+              Medicine and Health            </option>
+                      <option value="356">
+              Military            </option>
+                      <option value="343">
+              Aboriginal Peoples            </option>
+                      <option value="345">
+              Arts and Culture            </option>
+                      <option value="358">
+              Politics and Government            </option>
+                      <option value="361">
+              Religion            </option>
+                      <option value="362">
+              Science and Technology            </option>
+                      <option value="365">
+              Travel and Exploration            </option>
+                      <option value="346">
+              Communication            </option>
+                      <option value="347">
+              Education            </option>
+                      <option value="350">
+              Genealogical            </option>
+                      <option value="352">
+              Industry, Manufacturing and Commerce            </option>
+                      <option value="353">
+              Labour            </option>
+                      <option value="354">
+              Law and Justice            </option>
+                      <option value="357">
+              Natural Resources            </option>
+                      <option value="359">
+              Populations            </option>
+                  </select>
+      </div>
+
+      <div class="span4">
+        <label for="types">Archive type:</label>
+        <select name="types" id="types">
+          <option selected="selected"></option>
+                      <option value="245">
+              Religious            </option>
+                      <option value="251">
+              Military            </option>
+                      <option value="243">
+              Provincial/state            </option>
+                      <option value="247">
+              Municipal            </option>
+                      <option value="241">
+              National            </option>
+                      <option value="246">
+              University            </option>
+                      <option value="248">
+              Aboriginal            </option>
+                      <option value="249">
+              Educational            </option>
+                      <option value="252">
+              Private            </option>
+                      <option value="240">
+              International            </option>
+                      <option value="242">
+              Regional            </option>
+                      <option value="244">
+              Community            </option>
+                      <option value="250">
+              Medical            </option>
+                  </select>
+      </div>
+
+      <div class="span4">
+        <label for="regions">Region:</label>
+        <select name="regions" id="regions">
+          <option selected="selected"></option>
+                                
+                                  
+                                  
+                                  
+                                  
+                                  
+                                        <option value="Distrito Federal">Distrito Federal</option>
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                              </select>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="actions">
+    <input type="submit" class="c-btn c-btn-submit" value="Set filters">
+  </section>
+
+</form>
+    </div>
+  </section>
+
+
+                  
+<section class="masonry">
+
+  
+</section>
+  
+              
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    
+    <footer>
+
+  
+  
+  <div id="print-date">
+    Printed: 2026-09-12  </div>
+
+  <div id="js-i18n">
+    <div id="read-more-less-links"
+      data-read-more-text="Read more" 
+      data-read-less-text="Read less">
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

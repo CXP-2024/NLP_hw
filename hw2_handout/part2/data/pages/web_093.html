@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="/default/inc/style.css" type="text/css">
+<meta http-equiv='Content-Type' content='text/html; charset=ks_c_5601-1987'>
+</head>
+<body>
+<Div align='center'>
+<!--상단//--->
+<div style='background:url(/default/img/main/top_visual.jpg) no-repeat;width:880px;height:145px;text-align:left'>
+<div style='width:880px;margin-top:15px'><a href='/default/index.php'><img src='/default/img/main/logo.gif'></a></div>
+<div style='width:880px;margin-top:-44px' align='right'>
+<a href='/default/index.php'><img src='/default/img/main/top_home.gif'></a>
+<img src='/default/img/main/top_bar.gif'>
+<a href='/default/member/login.php?topmenu=member&left=2'><img src='/default/img/main/top_login.gif'></a>
+<img src='/default/img/main/top_bar.gif'>
+<a href='/default/member/join.php?topmenu=member&left=1'><img src='/default/img/main/top_join.gif'></a>
+<img src='/default/img/main/top_bar.gif'>
+<a href='/default/m1/menu6.php?topmenu=1&left=6'><img src='/default/img/main/top_map.gif'></a>
+</div>
+</div>
+<script>
+ function tm1(str)
+ {
+  if (str == 'm1'){
+   m1.src = "/default/img/main/menu_1_on.gif";
+   smenu1.style.display = "block";
+   smenu2.style.display = "none";
+   smenu3.style.display = "none";
+   smenu4.style.display = "none";
+   smenu5.style.display = "none";
+   smenu6.style.display = "none";
+   smenu7.style.display = "none";
+  }
+  if (str == 'm2'){
+   m2.src = "/default/img/main/menu_2_on.gif";
+   smenu1.style.display = "none";
+   smenu2.style.display = "block";
+   smenu3.style.display = "none";
+   smenu4.style.display = "none";
+   smenu5.style.display = "none";
+   smenu6.style.display = "none";
+   smenu7.style.display = "none";
+  }
+  if (str == 'm3'){
+   m3.src = "/default/img/main/menu_3_on.gif";
+   smenu1.style.display = "none";
+   smenu2.style.display = "none";
+   smenu3.style.display = "block";
+   smenu4.style.display = "none";
+   smenu5.style.display = "none";
+   smenu6.style.display = "none";
+   smenu7.style.display = "none";
+  }
+  if (str == 'm4'){
+   m4.src = "/default/img/main/menu_4_on.gif";
+   smenu1.style.display = "none";
+   smenu2.style.display = "none";
+   smenu3.style.display = "none";
+   smenu4.style.display = "block";
+   smenu5.style.display = "none";
+   smenu6.style.display = "none";
+   smenu7.style.display = "none";
+  }
+  if (str == 'm5'){
+   m5.src = "/default/img/main/menu_5_on.gif";
+   smenu1.style.display = "none";
+   smenu2.style.display = "none";
+   smenu3.style.display = "none";
+   smenu4.style.display = "none";
+   smenu5.style.display = "block";
+   smenu6.style.display = "none";
+   smenu7.style.display = "none";
+  }
+  if (str == 'm6'){
+   m6.src = "/default/img/main/menu_6_on.gif";
+   smenu1.style.display = "none";
+   smenu2.style.display = "none";
+   smenu3.style.display = "none";
+   smenu4.style.display = "none";
+   smenu5.style.display = "none";
+   smenu6.style.display = "block";
+   smenu7.style.display = "none";
+  }
+  if (str == 'm7'){
+   m7.src = "/default/img/main/menu_7_on.gif";
+   smenu1.style.display = "none";
+   smenu2.style.display = "none";
+   smenu3.style.display = "none";
+   smenu4.style.display = "none";
+   smenu5.style.display = "none";
+   smenu6.style.display = "none";
+   smenu7.style.display = "block";
+  }
+ }
+ function tm2(nm, str)
+ {
+  document.all[nm].src = "/default/img/main/menu_"+str+"_off.gif";
+ }
+</script>
+<!---1차 메뉴//--->
+<div id='menu'><!--
+--><a href='/default/m1/menu1.php?topmenu=1&left=1'><img src='/default/img/main/menu_1_off.gif' title='' alt='BMaster' id = "m1" onmouseover="tm1('m1')" onmouseout="tm2('m1','1')"></a><!--
+--><img src='/default/img/main/menu_bar.gif' hspace='3'><!--
+--><a href='/default/m2/menu1.php?topmenu=2&left=1'><img src='/default/img/main/menu_2_on.gif' title='' alt='구약역사서' id = "m2" onmouseover="tm1('m2')" onmouseout="tm2('m2','2')"></a><!--
+--><img src='/default/img/main/menu_bar.gif' hspace='3'><!--
+--><a href='/default/m3/menu1.php?topmenu=3&left=1&mode=lectureInfo'><img src='/default/img/main/menu_3_off.gif' title='' alt='구약체험서' id = "m3" onmouseover="tm1('m3')" onmouseout="tm2('m3','3')"></a><!--
+--><img src='/default/img/main/menu_bar.gif' hspace='3'><!--
+--><a href='/default/m4/menu1.php?topmenu=4&left=1'><img src='/default/img/main/menu_4_off.gif' title='' alt='구약예언서' id = "m4" onmouseover="tm1('m4')" onmouseout="tm2('m4','4')"></a><!--
+--><img src='/default/img/main/menu_bar.gif' hspace='3'><!--
+--><a href='/default/m5/menu1.php?topmenu=5&left=1'><img src='/default/img/main/menu_5_off.gif' title='' alt='신약역사서' id = "m5" onmouseover="tm1('m5')" onmouseout="tm2('m5','5')"></a><!--
+--><img src='/default/img/main/menu_bar.gif' hspace='3'><!--
+--><a href='/default/m6/menu1.php?topmenu=6&left=1'><img src='/default/img/main/menu_6_off.gif' title='' alt='신약체험서' id = "m6" onmouseover="tm1('m6')" onmouseout="tm2('m6','6')"></a><!--
+--><img src='/default/img/main/menu_bar.gif' hspace='3'><!--
+--><a href='/default/m7/menu1.php?topmenu=7&left=1'><img src='/default/img/main/menu_7_off.gif' title='' alt='신약예언서' id = "m7" onmouseover="tm1('m7')" onmouseout="tm2('m7','7')"></a></div>
+<!---1차 메뉴//--->
+<!---2차 메뉴//--->
+<div id='smenu'>
+<div id='smenu1' nowrap style="display:none">
+<a href='/default/m1/menu1.php?topmenu=1&left=1'>섬기는이</a>
+<a href='/default/m1/menu2.php?topmenu=1&left=2'>사이트구성</a>
+<a href='/default/m1/menu3.php?topmenu=1&left=3'>자유게시판</a>
+<a href='/default/m1/menu4.php?topmenu=1&left=4'>일정표</a>
+<a href='/default/m1/menu5.php?topmenu=1&left=5'>자료실</a>
+<a href='/default/m1/menu6.php?topmenu=1&left=6'>공지사항</a>
+<a href='/default/m1/menu7.php?topmenu=1&left=7'>새찬송가</a>
+<a href='/default/m1/menu8.php?topmenu=1&left=8'>신앙상담</a>
+<a href='/default/m1/menu9.php?topmenu=1&left=9'>이단관련</a>
+</div>
+<div id='smenu2' nowrap style="display:block">
+<a href='/default/m2/menu1.php?topmenu=2&left=1'>창 출 레 민</a>
+<a href='/default/m2/menu5.php?topmenu=2&left=5'>신 수 삿 룻</a>
+<a href='/default/m2/menu9.php?topmenu=2&left=9'>삼상하 왕상하</a>
+<a href='/default/m2/menu13.php?topmenu=2&left=13'>대상하 스</a>
+<a href='/default/m2/menu16.php?topmenu=2&left=16'>느 에</a>
+</div>
+<div id='smenu3' nowrap style="display:none">
+<a href='/default/m3/menu1.php?topmenu=3&left=1'>욥기</a>
+<a href='/default/m3/menu2.php?topmenu=3&left=2'>시편</a>
+<a href='/default/m3/menu3.php?topmenu=3&left=3'>잠언</a>
+<a href='/default/m3/menu4.php?topmenu=3&left=4'>전도서</a>
+<a href='/default/m3/menu5.php?topmenu=3&left=5'>아가</a>
+</div>
+<div id='smenu4' nowrap style="display:none">
+<a href='/default/m4/menu1.php?topmenu=4&left=1'>사 렘 애 겔</a>
+<a href='/default/m4/menu5.php?topmenu=4&left=5'>단 호 욜</a>
+<a href='/default/m4/menu8.php?topmenu=4&left=8'>암 옵 욘 미</a>
+<a href='/default/m4/menu12.php?topmenu=4&left=12'>나 합 습</a>
+<a href='/default/m4/menu15.php?topmenu=4&left=15'>학 슥 말</a>
+</div>
+<div id='smenu5' nowrap style="display:none">
+<a href='/default/m5/menu1.php?topmenu=5&left=1'>마태복음</a>
+<a href='/default/m5/menu2.php?topmenu=5&left=2'>마가복음</a>
+<a href='/default/m5/menu3.php?topmenu=5&left=3'>누가복음</a>
+<a href='/default/m5/menu4.php?topmenu=5&left=4'>요한복음</a>
+<a href='/default/m5/menu5.php?topmenu=5&left=5'>사도행전</a>
+</div>
+<div id='smenu6' nowrap style="display:none">
+<a href='/default/m6/menu1.php?topmenu=6&left=1'>롬 고전후 갈 엡</a>
+<a href='/default/m6/menu6.php?topmenu=6&left=6'>빌 골 살전후 딤전후</a>
+<a href='/default/m6/menu12.php?topmenu=6&left=12'>딛 몬 히 약</a>
+<a href='/default/m6/menu16.php?topmenu=6&left=16'>벧전후 요123 유</a>
+</div>
+<div id='smenu7' nowrap style="display:none">
+<a href='/default/m7/menu1.php?topmenu=7&left=1'>요한계시록</a>
+</div>
+</div>
+<!---2차 메뉴//--->
+<!--상단 닫기는 footer에 있습니다.//--->
+<div style='width:880px;text-align:left;overflow-x:hidden'>
+<div style='width:200px;float:left'>
+<!-- 왼쪽 메뉴 //-->
+<img src='/default/img/main/left_title2.gif'>
+<table border='1' cellpadding='0' cellspacing='0' id='leftmenu' frame='void' bordercolor='#cccccc'>
+<tr><td class='leftmenu_off'><a href='menu1.php?topmenu=2&left=1'>창세기</a></td></tr>
+<tr><td class='leftmenu_on'><a href='menu2.php?topmenu=2&left=2'>출애굽기</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu3.php?topmenu=2&left=3'>레위기</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu4.php?topmenu=2&left=4'>민수기</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu5.php?topmenu=2&left=5'>신명기</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu6.php?topmenu=2&left=6'>여호수아</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu7.php?topmenu=2&left=7'>사사기</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu8.php?topmenu=2&left=8'>룻기</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu9.php?topmenu=2&left=9'>사무엘상</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu10.php?topmenu=2&left=10'>사무엘하</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu11.php?topmenu=2&left=11'>열왕기상</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu12.php?topmenu=2&left=12'>열왕기하</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu13.php?topmenu=2&left=13'>역대상</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu14.php?topmenu=2&left=14'>역대하</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu15.php?topmenu=2&left=15'>에스라</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu16.php?topmenu=2&left=16'>느헤미야</a></td></tr>
+<tr><td class='leftmenu_off'><a href='menu17.php?topmenu=2&left=17'>에스더</a></td></tr>
+<tr><td class='leftmenu_btm'></td></tr>
+</table>
+<div id='left_bnr'>
+<img src='../img/main/bnr_left_01.gif'>
+</div>
+<!-- 왼쪽 메뉴 //-->
+</div>
+<div style='float:left;width:650px;height=600px;position:relative;margin-left:30px;'>
+<div id='history'>
+HOME &gt; 구약역사서 &gt; <span>출애굽기</span>
+</div>
+<div style='clear:both;'><img src='../img/main/bar_title.gif'></div>
+<!-- 본문 //--->
+<P align=center></P><IFRAME height="100%" marginHeight=0 src="http://junch7.cafe24.com/zeroboard/zboard.php?id=02Exodus" frameBorder=0 width="100%" marginWidth=0></IFRAME>
+</div>
+<!-- 상단 시작은 topmenu 에 있습니다. // -->
+</div>
+<hr style='display:none'>
+<div style='background:url(/default/img/main/top_bg_patt.gif) repeat-x;padding-top:3px;margin-top:30px'>
+<img src='/default/img/main/footer.gif'>
+</div><script language="javascript" type="text/javascript" src="/cjs/javascript.lib.js?date=1787019253"></script>
+
+            <script type="text/javascript">
+            var JsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+            var sTime = new Date().getTime();
+            document.write(unescape("%3Cscript id='log_script' src='" + JsHost + "blg-jsk.cafe24.com/weblog.js?uid=junch777&t=" + sTime + "' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+        

@@ -1,0 +1,760 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>美元汇率30天走势</title>
+	<meta name="keywords" content="100人民币等于多少韩元,今日100人民币兑韩元汇率" />
+	<meta name="description" content="在线实时汇率换算工具为您提供今日100人民币兑韩元汇率实时查询，以及100人民币等于19,633.0000韩元、100人民币可以兑多少韩元的汇率走势图！" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=1200">
+	<meta name="applicable-device" content="pc">
+	<meta name="renderer" content="webkit">
+	<link rel="shortcut icon" type="image/x-icon" href= "https://181353.com/favicon.ico" />
+	<link rel="icon" sizes="32x32" href="https://181353.com/favicon.ico">
+	<link rel="stylesheet" href="https://181353.com/view/huilv_zh/static/css/layui.css">
+	<script src="https://181353.comhttps://181353.comhttps://181353.com/view/huilv_zh/static/js/layui.js"></script>
+	<link href="https://181353.comhttps://181353.com/view/huilv_zh/static/css/select2.min.css" rel="stylesheet">
+	<link href="https://181353.com/view/huilv_zh/static/css/select2-bootstrap4.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://181353.com/view/huilv_zh/static/css/style.css">
+	<script src="https://181353.comhttps://181353.comhttps://181353.com/view/huilv_zh/static/js/jquery.min.js"></script>
+	<script src="https://181353.comhttps://181353.com/view/huilv_zh/static/js/select2.full.min.js"></script>
+	<script src="https://181353.com/view/huilv_zh/static/js/common.js?lang=zh"></script>
+	<script type="text/javascript">
+		window._LE = {
+			uri: "https://181353.com/",
+			uid: "0",
+			parseurl: "1",
+			url_suffix: ".html",
+			lang: "zh",
+			lang_def:"zh",
+			theme: "huilv_zh"
+		};
+	</script>
+</head>
+<body>
+<div id="header">
+	<div class="layui-container">
+		<div class="head">
+			<div class="logo">
+				<a href="/" title="在线实时汇率换算工具" class="logo">
+					<img src="https://181353.com/view/huilv_zh/static/picture/logo.png" alt="在线实时汇率换算工具" width="120" height="63">
+				</a>
+			</div>
+						<ul class="nav layui-hide-xs">
+				<li ><a href="/" title="在线实时汇率换算工具">首页</a></li>
+								<li ><a href="https://181353.com/exchangerate.html" title="汇率兑换">汇率兑换</a></li>
+								<li ><a href="https://181353.com/bank.html" title="银行牌价">银行牌价</a></li>
+								<li ><a href="https://181353.com/currency.html" title="货币代码">货币代码</a></li>
+								<li ><a href="https://181353.com/daxie.html" title="大写转换">大写转换</a></li>
+												<li style="text-align: center;padding-top: 2px;" class="langs-li">
+					<select id="langs" class="langs" name="langs">
+						<option value="en" > English </option>
+						<option value="zh" selected="selected"> 简体中文 </option>
+					</select>
+				</li>
+							</ul>
+					</div>
+	</div>
+</div>
+
+<div id="content" class="layui-container">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md8 mb10">
+                                    <h2 class="title with-icon">
+                <span class="header-icon arrows"></span>
+                <span class="text">今日实时汇率</span>
+            </h2>
+            <div class="converter-box mb10" data-name="CNY_KRW">
+                <div class="currency-box layui-row layui-col-space15">
+                    <div class="layui-col-md3">
+                        <div class="amount">
+                            <label for="amount">金额</label>
+                            <input type="number" placeholder="请输入兑换金额..." name="amount" id="amount" class="nums" size="31" autocomplete="off" value="100" min="0">
+                        </div>
+                    </div>
+
+                    <div class="layui-col-md4">
+                        <div class="select">
+                            <label>持有</label>
+                            <select class="form-control js-select-matcher-start" id="select-from">
+                                                                <option value="USD">美元 USD</option>                                                                <option value="CNY" selected>人民币 CNY</option>                                                                <option value="EUR">欧元 EUR</option>                                                                <option value="GBP">英镑 GBP</option>                                                                <option value="AUD">澳元 AUD</option>                                                                <option value="CAD">加元 CAD</option>                                                                <option value="JPY">日元 JPY</option>                                                                <option value="HKD">港币 HKD</option>                                                                <option value="INR">印度卢比 INR</option>                                                                <option value="MOP">澳门元 MOP</option>                                                                <option value="KRW">韩元 KRW</option>                                                                <option value="MXN">墨西哥比索 MXN</option>                                                                <option value="AED">阿联酋迪拉姆 AED</option>                                                                <option value="AFN">阿富汗尼 AFN</option>                                                                <option value="ALL">阿尔巴尼列克 ALL</option>                                                                <option value="AMD">亚美尼亚德拉姆 AMD</option>                                                                <option value="ANG">荷兰盾 ANG</option>                                                                <option value="AOA">安哥拉宽扎 AOA</option>                                                                <option value="ARS">阿根廷比索 ARS</option>                                                                <option value="AWG">阿鲁巴弗罗林 AWG</option>                                                                <option value="AZN">阿塞拜疆马纳特 AZN</option>                                                                <option value="BAM">波黑可兑换马克 BAM</option>                                                                <option value="BBD">巴巴多斯元 BBD</option>                                                                <option value="BDT">孟加拉国塔卡 BDT</option>                                                                <option value="BGN">保加利亚列弗 BGN</option>                                                                <option value="BHD">巴林第纳尔 BHD</option>                                                                <option value="BIF">布隆迪法郎 BIF</option>                                                                <option value="BMD">百慕达元 BMD</option>                                                                <option value="BND">文莱元 BND</option>                                                                <option value="BOB">玻利维亚诺 BOB</option>                                                                <option value="BRL">巴西雷亚尔 BRL</option>                                                                <option value="BSD">巴哈马元 BSD</option>                                                                <option value="BTN">不丹努尔特鲁姆 BTN</option>                                                                <option value="BWP">博茨瓦纳普拉 BWP</option>                                                                <option value="BYN">白俄罗斯卢布 BYN</option>                                                                <option value="BZD">伯利兹元 BZD</option>                                                                <option value="CDF">刚果法郎 CDF</option>                                                                <option value="CHF">瑞士法郎 CHF</option>                                                                <option value="CLP">智利比索 CLP</option>                                                                <option value="COP">哥伦比亚比索 COP</option>                                                                <option value="CRC">哥斯达黎加科朗 CRC</option>                                                                <option value="CUP">古巴比索 CUP</option>                                                                <option value="CVE">佛得角埃斯库多 CVE</option>                                                                <option value="CZK">捷克克朗 CZK</option>                                                                <option value="DJF">吉布提法郎 DJF</option>                                                                <option value="DKK">丹麦克朗 DKK</option>                                                                <option value="DOP">多米尼加比索 DOP</option>                                                                <option value="DZD">阿尔及利亚第纳尔 DZD</option>                                                                <option value="EGP">埃及镑 EGP</option>                                                                <option value="ERN">厄立特里亚纳克法 ERN</option>                                                                <option value="ETB">埃塞俄比亚比尔 ETB</option>                                                                <option value="FJD">斐济元 FJD</option>                                                                <option value="FKP">福克兰镑 FKP</option>                                                                <option value="FOK">FOK募集币 FOK</option>                                                                <option value="GEL">格鲁吉亚拉里 GEL</option>                                                                <option value="GGP">格恩西岛磅 GGP</option>                                                                <option value="GHS">加纳塞地 GHS</option>                                                                <option value="GIP">直布罗陀镑 GIP</option>                                                                <option value="GMD">冈比亚达拉西 GMD</option>                                                                <option value="GNF">几内亚法郎 GNF</option>                                                                <option value="GTQ">危地马拉格查尔 GTQ</option>                                                                <option value="GYD">圭亚那元 GYD</option>                                                                <option value="HNL">洪都拉斯伦皮拉 HNL</option>                                                                <option value="HRK">克罗地亚库纳 HRK</option>                                                                <option value="HTG">海地古德 HTG</option>                                                                <option value="HUF">匈牙利福林 HUF</option>                                                                <option value="IDR">印度尼西亚卢比 IDR</option>                                                                <option value="ILS">以色列新谢克尔 ILS</option>                                                                <option value="IMP">马恩磅 IMP</option>                                                                <option value="IQD">伊拉克第纳尔 IQD</option>                                                                <option value="IRR">伊朗里亚尔 IRR</option>                                                                <option value="ISK">冰岛克郎 ISK</option>                                                                <option value="JEP">新泽西岛磅 JEP</option>                                                                <option value="JMD">牙买加元 JMD</option>                                                                <option value="JOD">约旦第纳尔 JOD</option>                                                                <option value="KES">肯尼亚先令 KES</option>                                                                <option value="KGS">吉尔吉斯斯坦索姆 KGS</option>                                                                <option value="KHR">柬埔寨瑞尔 KHR</option>                                                                <option value="KID">基里巴斯 KID</option>                                                                <option value="KMF">科摩罗法郎 KMF</option>                                                                <option value="KWD">科威特第纳尔 KWD</option>                                                                <option value="KYD">开曼群岛元 KYD</option>                                                                <option value="KZT">哈萨克斯坦坚戈 KZT</option>                                                                <option value="LAK">老挝基普 LAK</option>                                                                <option value="LBP">黎巴嫩镑 LBP</option>                                                                <option value="LKR">斯里兰卡卢比 LKR</option>                                                                <option value="LRD">利比里亚元 LRD</option>                                                                <option value="LSL">莱索托洛蒂 LSL</option>                                                                <option value="LYD">利比亚第纳尔 LYD</option>                                                                <option value="MAD">摩洛哥迪拉姆 MAD</option>                                                                <option value="MDL">摩尔多瓦列伊 MDL</option>                                                                <option value="MGA">马达加斯加阿里亚里 MGA</option>                                                                <option value="MKD">马其顿代纳尔 MKD</option>                                                                <option value="MMK">缅甸元 MMK</option>                                                                <option value="MNT">蒙古货币 MNT</option>                                                                <option value="MRU">毛塔币 MRU</option>                                                                <option value="MUR">毛里求斯卢比 MUR</option>                                                                <option value="MVR">马尔代夫拉菲亚 MVR</option>                                                                <option value="MWK">马拉维克瓦查 MWK</option>                                                                <option value="MYR">林吉特 MYR</option>                                                                <option value="MZN">莫桑比克新梅蒂卡尔 MZN</option>                                                                <option value="NAD">纳米比亚元 NAD</option>                                                                <option value="NGN">尼日利亚奈拉 NGN</option>                                                                <option value="NIO">尼加拉瓜新科多巴 NIO</option>                                                                <option value="NOK">挪威克朗 NOK</option>                                                                <option value="NPR">尼泊尔卢比 NPR</option>                                                                <option value="NZD">新西兰元 NZD</option>                                                                <option value="OMR">阿曼里亚尔 OMR</option>                                                                <option value="PAB">巴拿马巴波亚 PAB</option>                                                                <option value="PEN">秘鲁新索尔 PEN</option>                                                                <option value="PGK">巴布亚新几内亚基那 PGK</option>                                                                <option value="PHP">菲律宾比索 PHP</option>                                                                <option value="PKR">巴基斯坦卢比 PKR</option>                                                                <option value="PLN">波兰兹罗提 PLN</option>                                                                <option value="PYG">巴拉圭瓜拉尼 PYG</option>                                                                <option value="QAR">卡塔尔里亚尔 QAR</option>                                                                <option value="RON">罗马尼亚列伊 RON</option>                                                                <option value="RSD">塞尔维亚第纳尔 RSD</option>                                                                <option value="RUB">俄罗斯卢布 RUB</option>                                                                <option value="RWF">卢旺达法郎 RWF</option>                                                                <option value="SAR">沙特里亚尔 SAR</option>                                                                <option value="SBD">所罗门群岛元 SBD</option>                                                                <option value="SCR">塞舌尔卢比 SCR</option>                                                                <option value="SDG">苏丹镑 SDG</option>                                                                <option value="SEK">瑞典克朗 SEK</option>                                                                <option value="SGD">新加坡元 SGD</option>                                                                <option value="SHP">圣赫勒拿镑 SHP</option>                                                                <option value="SLE">英镑SLE SLE</option>                                                                <option value="SLL">塞拉利昂利昂 SLL</option>                                                                <option value="SOS">索马里先令 SOS</option>                                                                <option value="SRD">苏里南元 SRD</option>                                                                <option value="SSP">南苏丹币 SSP</option>                                                                <option value="STN">圣多美多布拉 STN</option>                                                                <option value="SYP">叙利亚镑 SYP</option>                                                                <option value="SZL">斯威士兰里兰吉尼 SZL</option>                                                                <option value="THB">泰铢 THB</option>                                                                <option value="TJS">塔吉克斯坦索莫尼 TJS</option>                                                                <option value="TMT">土库曼斯坦马纳特 TMT</option>                                                                <option value="TND">突尼斯第纳尔 TND</option>                                                                <option value="TOP">汤加潘加 TOP</option>                                                                <option value="TRY">土耳其里拉 TRY</option>                                                                <option value="TTD">特立尼达多巴哥元 TTD</option>                                                                <option value="TVD">图瓦卢元 TVD</option>                                                                <option value="TWD">新台币 TWD</option>                                                                <option value="TZS">坦桑尼亚先令 TZS</option>                                                                <option value="UAH">乌克兰格里夫纳 UAH</option>                                                                <option value="UGX">乌干达先令 UGX</option>                                                                <option value="UYU">乌拉圭比索 UYU</option>                                                                <option value="UZS">乌兹别克斯坦苏姆 UZS</option>                                                                <option value="VES">委内瑞拉玻利瓦尔 VES</option>                                                                <option value="VND">越南盾 VND</option>                                                                <option value="VUV">瓦努阿图瓦图 VUV</option>                                                                <option value="WST">萨摩亚塔拉 WST</option>                                                                <option value="XAF">中非法郎 XAF</option>                                                                <option value="XCD">东加勒比元 XCD</option>                                                                <option value="XDR">特别提款权 XDR</option>                                                                <option value="XOF">西非法郎 XOF</option>                                                                <option value="XPF">太平洋法郎 XPF</option>                                                                <option value="YER">也门里亚尔 YER</option>                                                                <option value="ZAR">南非兰特 ZAR</option>                                                                <option value="ZMW">赞比亚克瓦查 ZMW</option>                                                                <option value="ZWL">津巴布韦币 ZWL</option>                                                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-col-md1 exchange">
+                        <label class="layui-hide-xs"></label>
+                        <button class="layui-btn layui-btn-sm layui-btn-fluid exchange-icon">交换</button>
+                    </div>
+                    <div class="layui-col-md4">
+                        <div class="select">
+                            <label class="layui-hide-xs">兑换</label>
+                            <select class="js-select-matcher-start" id="select-to">
+                                                                <option value="USD">美元 USD</option>                                                                <option value="CNY">人民币 CNY</option>                                                                <option value="EUR">欧元 EUR</option>                                                                <option value="GBP">英镑 GBP</option>                                                                <option value="AUD">澳元 AUD</option>                                                                <option value="CAD">加元 CAD</option>                                                                <option value="JPY">日元 JPY</option>                                                                <option value="HKD">港币 HKD</option>                                                                <option value="INR">印度卢比 INR</option>                                                                <option value="MOP">澳门元 MOP</option>                                                                <option value="KRW" selected>韩元 KRW</option>                                                                <option value="MXN">墨西哥比索 MXN</option>                                                                <option value="AED">阿联酋迪拉姆 AED</option>                                                                <option value="AFN">阿富汗尼 AFN</option>                                                                <option value="ALL">阿尔巴尼列克 ALL</option>                                                                <option value="AMD">亚美尼亚德拉姆 AMD</option>                                                                <option value="ANG">荷兰盾 ANG</option>                                                                <option value="AOA">安哥拉宽扎 AOA</option>                                                                <option value="ARS">阿根廷比索 ARS</option>                                                                <option value="AWG">阿鲁巴弗罗林 AWG</option>                                                                <option value="AZN">阿塞拜疆马纳特 AZN</option>                                                                <option value="BAM">波黑可兑换马克 BAM</option>                                                                <option value="BBD">巴巴多斯元 BBD</option>                                                                <option value="BDT">孟加拉国塔卡 BDT</option>                                                                <option value="BGN">保加利亚列弗 BGN</option>                                                                <option value="BHD">巴林第纳尔 BHD</option>                                                                <option value="BIF">布隆迪法郎 BIF</option>                                                                <option value="BMD">百慕达元 BMD</option>                                                                <option value="BND">文莱元 BND</option>                                                                <option value="BOB">玻利维亚诺 BOB</option>                                                                <option value="BRL">巴西雷亚尔 BRL</option>                                                                <option value="BSD">巴哈马元 BSD</option>                                                                <option value="BTN">不丹努尔特鲁姆 BTN</option>                                                                <option value="BWP">博茨瓦纳普拉 BWP</option>                                                                <option value="BYN">白俄罗斯卢布 BYN</option>                                                                <option value="BZD">伯利兹元 BZD</option>                                                                <option value="CDF">刚果法郎 CDF</option>                                                                <option value="CHF">瑞士法郎 CHF</option>                                                                <option value="CLP">智利比索 CLP</option>                                                                <option value="COP">哥伦比亚比索 COP</option>                                                                <option value="CRC">哥斯达黎加科朗 CRC</option>                                                                <option value="CUP">古巴比索 CUP</option>                                                                <option value="CVE">佛得角埃斯库多 CVE</option>                                                                <option value="CZK">捷克克朗 CZK</option>                                                                <option value="DJF">吉布提法郎 DJF</option>                                                                <option value="DKK">丹麦克朗 DKK</option>                                                                <option value="DOP">多米尼加比索 DOP</option>                                                                <option value="DZD">阿尔及利亚第纳尔 DZD</option>                                                                <option value="EGP">埃及镑 EGP</option>                                                                <option value="ERN">厄立特里亚纳克法 ERN</option>                                                                <option value="ETB">埃塞俄比亚比尔 ETB</option>                                                                <option value="FJD">斐济元 FJD</option>                                                                <option value="FKP">福克兰镑 FKP</option>                                                                <option value="FOK">FOK募集币 FOK</option>                                                                <option value="GEL">格鲁吉亚拉里 GEL</option>                                                                <option value="GGP">格恩西岛磅 GGP</option>                                                                <option value="GHS">加纳塞地 GHS</option>                                                                <option value="GIP">直布罗陀镑 GIP</option>                                                                <option value="GMD">冈比亚达拉西 GMD</option>                                                                <option value="GNF">几内亚法郎 GNF</option>                                                                <option value="GTQ">危地马拉格查尔 GTQ</option>                                                                <option value="GYD">圭亚那元 GYD</option>                                                                <option value="HNL">洪都拉斯伦皮拉 HNL</option>                                                                <option value="HRK">克罗地亚库纳 HRK</option>                                                                <option value="HTG">海地古德 HTG</option>                                                                <option value="HUF">匈牙利福林 HUF</option>                                                                <option value="IDR">印度尼西亚卢比 IDR</option>                                                                <option value="ILS">以色列新谢克尔 ILS</option>                                                                <option value="IMP">马恩磅 IMP</option>                                                                <option value="IQD">伊拉克第纳尔 IQD</option>                                                                <option value="IRR">伊朗里亚尔 IRR</option>                                                                <option value="ISK">冰岛克郎 ISK</option>                                                                <option value="JEP">新泽西岛磅 JEP</option>                                                                <option value="JMD">牙买加元 JMD</option>                                                                <option value="JOD">约旦第纳尔 JOD</option>                                                                <option value="KES">肯尼亚先令 KES</option>                                                                <option value="KGS">吉尔吉斯斯坦索姆 KGS</option>                                                                <option value="KHR">柬埔寨瑞尔 KHR</option>                                                                <option value="KID">基里巴斯 KID</option>                                                                <option value="KMF">科摩罗法郎 KMF</option>                                                                <option value="KWD">科威特第纳尔 KWD</option>                                                                <option value="KYD">开曼群岛元 KYD</option>                                                                <option value="KZT">哈萨克斯坦坚戈 KZT</option>                                                                <option value="LAK">老挝基普 LAK</option>                                                                <option value="LBP">黎巴嫩镑 LBP</option>                                                                <option value="LKR">斯里兰卡卢比 LKR</option>                                                                <option value="LRD">利比里亚元 LRD</option>                                                                <option value="LSL">莱索托洛蒂 LSL</option>                                                                <option value="LYD">利比亚第纳尔 LYD</option>                                                                <option value="MAD">摩洛哥迪拉姆 MAD</option>                                                                <option value="MDL">摩尔多瓦列伊 MDL</option>                                                                <option value="MGA">马达加斯加阿里亚里 MGA</option>                                                                <option value="MKD">马其顿代纳尔 MKD</option>                                                                <option value="MMK">缅甸元 MMK</option>                                                                <option value="MNT">蒙古货币 MNT</option>                                                                <option value="MRU">毛塔币 MRU</option>                                                                <option value="MUR">毛里求斯卢比 MUR</option>                                                                <option value="MVR">马尔代夫拉菲亚 MVR</option>                                                                <option value="MWK">马拉维克瓦查 MWK</option>                                                                <option value="MYR">林吉特 MYR</option>                                                                <option value="MZN">莫桑比克新梅蒂卡尔 MZN</option>                                                                <option value="NAD">纳米比亚元 NAD</option>                                                                <option value="NGN">尼日利亚奈拉 NGN</option>                                                                <option value="NIO">尼加拉瓜新科多巴 NIO</option>                                                                <option value="NOK">挪威克朗 NOK</option>                                                                <option value="NPR">尼泊尔卢比 NPR</option>                                                                <option value="NZD">新西兰元 NZD</option>                                                                <option value="OMR">阿曼里亚尔 OMR</option>                                                                <option value="PAB">巴拿马巴波亚 PAB</option>                                                                <option value="PEN">秘鲁新索尔 PEN</option>                                                                <option value="PGK">巴布亚新几内亚基那 PGK</option>                                                                <option value="PHP">菲律宾比索 PHP</option>                                                                <option value="PKR">巴基斯坦卢比 PKR</option>                                                                <option value="PLN">波兰兹罗提 PLN</option>                                                                <option value="PYG">巴拉圭瓜拉尼 PYG</option>                                                                <option value="QAR">卡塔尔里亚尔 QAR</option>                                                                <option value="RON">罗马尼亚列伊 RON</option>                                                                <option value="RSD">塞尔维亚第纳尔 RSD</option>                                                                <option value="RUB">俄罗斯卢布 RUB</option>                                                                <option value="RWF">卢旺达法郎 RWF</option>                                                                <option value="SAR">沙特里亚尔 SAR</option>                                                                <option value="SBD">所罗门群岛元 SBD</option>                                                                <option value="SCR">塞舌尔卢比 SCR</option>                                                                <option value="SDG">苏丹镑 SDG</option>                                                                <option value="SEK">瑞典克朗 SEK</option>                                                                <option value="SGD">新加坡元 SGD</option>                                                                <option value="SHP">圣赫勒拿镑 SHP</option>                                                                <option value="SLE">英镑SLE SLE</option>                                                                <option value="SLL">塞拉利昂利昂 SLL</option>                                                                <option value="SOS">索马里先令 SOS</option>                                                                <option value="SRD">苏里南元 SRD</option>                                                                <option value="SSP">南苏丹币 SSP</option>                                                                <option value="STN">圣多美多布拉 STN</option>                                                                <option value="SYP">叙利亚镑 SYP</option>                                                                <option value="SZL">斯威士兰里兰吉尼 SZL</option>                                                                <option value="THB">泰铢 THB</option>                                                                <option value="TJS">塔吉克斯坦索莫尼 TJS</option>                                                                <option value="TMT">土库曼斯坦马纳特 TMT</option>                                                                <option value="TND">突尼斯第纳尔 TND</option>                                                                <option value="TOP">汤加潘加 TOP</option>                                                                <option value="TRY">土耳其里拉 TRY</option>                                                                <option value="TTD">特立尼达多巴哥元 TTD</option>                                                                <option value="TVD">图瓦卢元 TVD</option>                                                                <option value="TWD">新台币 TWD</option>                                                                <option value="TZS">坦桑尼亚先令 TZS</option>                                                                <option value="UAH">乌克兰格里夫纳 UAH</option>                                                                <option value="UGX">乌干达先令 UGX</option>                                                                <option value="UYU">乌拉圭比索 UYU</option>                                                                <option value="UZS">乌兹别克斯坦苏姆 UZS</option>                                                                <option value="VES">委内瑞拉玻利瓦尔 VES</option>                                                                <option value="VND">越南盾 VND</option>                                                                <option value="VUV">瓦努阿图瓦图 VUV</option>                                                                <option value="WST">萨摩亚塔拉 WST</option>                                                                <option value="XAF">中非法郎 XAF</option>                                                                <option value="XCD">东加勒比元 XCD</option>                                                                <option value="XDR">特别提款权 XDR</option>                                                                <option value="XOF">西非法郎 XOF</option>                                                                <option value="XPF">太平洋法郎 XPF</option>                                                                <option value="YER">也门里亚尔 YER</option>                                                                <option value="ZAR">南非兰特 ZAR</option>                                                                <option value="ZMW">赞比亚克瓦查 ZMW</option>                                                                <option value="ZWL">津巴布韦币 ZWL</option>                                                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="layui-col-md12">
+                        <div class="layui-col-md8">
+                            <div class="exchange-result">
+                                <p class="f">100 人民币（CNY）=</p>
+                                <p class="t">19633<span class="faded-digits"></span> 韩元（KRW）</p>
+                                                                <p class="e">
+                                    反向汇率：1 KRW = 0.0051 CNY                                    <span class="visible-xs">&nbsp;&nbsp;更新时间：2026-09-12 22:40:40</span>
+                                </p>
+                                                            </div>
+                        </div>
+                        <div class="layui-col-md4 exchange-button">
+                            <button class="layui-btn mt-10" type="button">立即换算</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="layui-card mb10 converter-box">
+                <p class="pd-5">
+                    今日人民币兑换韩元汇率为：
+                </p>
+                <p class="pd-5">
+                    1 人民币等于 196.3300 韩元（1 CNY = 196.3300 KRW），那么 100 人民币可以兑换成多少韩元呢？
+                </p>
+                <hr>
+                <p class="pd-5">
+                    我们可以用以下公式进行计算：
+                </p>
+
+                <p class="pd-5">
+                    100 人民币 * 196.3300 韩元 / 1 人民币 = 19633 韩元                </p>
+
+                <p class="pd-5">
+                    所以，根据汇率可以算出 100 人民币可兑换 19633 韩元，即 100 人民币 等于 19633韩元（100 CNY = 19633 KRW）。
+                </p>
+                <hr>
+                <p class="pd-5">
+                    注意：此计算结果仅供参考，实际兑换请以银行实际交易成交价为准。
+                </p>
+            </div>
+            
+            
+
+                        <div class="layui-card" style="margin-bottom: 0px;">
+                <h2 class="title with-icon">
+                    <span class="header-icon line-chart"></span>
+                    <span class="text">人民币兑韩元汇率走势图</span>
+                </h2>
+            </div>
+            <div id="chart-card" class="layui-card mb10">
+                <div id="chart-container"></div>
+            </div>
+            
+                        <div class="layui-card mt-10">
+                <h2 class="title with-icon" style="border-bottom: 0;">
+                    <span class="header-icon coins"></span>
+                    <span class="text">人民币兑韩元怎么算</span>
+                </h2>
+                <table class="layui-table " style="margin-top: 0;">
+                    <thead>
+                    <tr>
+                        <th class="center" colspan="2">
+                            <img class="img" src="/view/huilv_zh/static/currency/cny.svg" alt="人民币" height="20">人民币兑韩元                        </th>
+                        <th class="center" colspan="2">
+                            <img class="img" src="/view/huilv_zh/static/currency/krw.svg" alt="韩元" height="20">韩元兑人民币                        </th>
+                    </tr>
+                    <tr>
+                        <th class="center">人民币</th>
+                        <th class="center">韩元</th>
+                        <th class="center">韩元</th>
+                        <th class="center">人民币</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/usb_thb/0b499995.html">1&nbsp;CNY</a></td>
+                        <td class="center">196.33&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/krw_thb/75f499920.html">1&nbsp;KRW</a></td>
+                        <td class="center">0.0051&nbsp;CNY</td>
+                    </tr>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/krw_thb/554d499441.html">5&nbsp;CNY</a></td>
+                        <td class="center">981.65&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/jpy_krw/3b499992.html">5&nbsp;KRW</a></td>
+                        <td class="center">0.0255&nbsp;CNY</td>
+                    </tr>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/usb_thb/544c499451.html">10&nbsp;CNY</a></td>
+                        <td class="center">1963.3&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/krw_thb/552f499443.html">10&nbsp;KRW</a></td>
+                        <td class="center">0.0509&nbsp;CNY</td>
+                    </tr>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/hkd_jpy/40d499955.html">25&nbsp;CNY</a></td>
+                        <td class="center">4908.25&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/hkd_jpy/513e499482.html">25&nbsp;KRW</a></td>
+                        <td class="center">0.1273&nbsp;CNY</td>
+                    </tr>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/eur_thb/521f499474.html">50&nbsp;CNY</a></td>
+                        <td class="center">9816.5&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/hkd_jpy/98c499897.html">50&nbsp;KRW</a></td>
+                        <td class="center">0.2547&nbsp;CNY</td>
+                    </tr>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/usb_thb/547c499448.html">100&nbsp;CNY</a></td>
+                        <td class="center">19633&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/hkd_jpy/3b499992.html">100&nbsp;KRW</a></td>
+                        <td class="center">0.5093&nbsp;CNY</td>
+                    </tr>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/krw_thb/50b499945.html">500&nbsp;CNY</a></td>
+                        <td class="center">98165&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/usb_thb/2a499993.html">500&nbsp;KRW</a></td>
+                        <td class="center">2.5467&nbsp;CNY</td>
+                    </tr>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/usb_thb/515c499480.html">1000&nbsp;CNY</a></td>
+                        <td class="center">196330&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/eur_thb/55b499940.html">1000&nbsp;KRW</a></td>
+                        <td class="center">5.0935&nbsp;CNY</td>
+                    </tr>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/krw_thb/540e499455.html">5000&nbsp;CNY</a></td>
+                        <td class="center">981650&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/hkd_jpy/39d499956.html">5000&nbsp;KRW</a></td>
+                        <td class="center">25.4673&nbsp;CNY</td>
+                    </tr>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/usb_thb/82b499913.html">10000&nbsp;CNY</a></td>
+                        <td class="center">1963300&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/jpy_krw/3b499992.html">10000&nbsp;KRW</a></td>
+                        <td class="center">50.9347&nbsp;CNY</td>
+                    </tr>
+                                        <tr>
+                        <td class="center"><a href="http://2309tz.top/jpy_krw/28a499967.html">50000&nbsp;CNY</a></td>
+                        <td class="center">9816500&nbsp;KRW</td>
+                        <td class="center"><a href="http://2309tz.top/hkd_jpy/46e499949.html">50000&nbsp;KRW</a></td>
+                        <td class="center">254.6733&nbsp;CNY</td>
+                    </tr>
+                                        </tbody>
+                </table>
+            </div>
+            
+            <div class="layui-card mt-10">
+    <h2 class="title with-icon">
+        <span class="header-icon coins"></span>
+        <span class="text">用户正在查兑</span>
+    </h2>
+
+    <div class="conversion-list">
+        <div class="layui-row layui-col-space15">
+                                    <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/krw_thb/522b499473.html" title="6183 英镑兑欧元" class="to-link" target="_blank">
+                    6183 英镑兑欧元                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/krw_thb/547c499448.html" title="477 韩元兑英镑" class="to-link" target="_blank">
+                    477 韩元兑英镑                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/eur_thb/538b499457.html" title="8641 美元兑英镑" class="to-link" target="_blank">
+                    8641 美元兑英镑                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/usb_thb/543e499452.html" title="1275 英镑兑日元" class="to-link" target="_blank">
+                    1275 英镑兑日元                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/usb_thb/515c499480.html" title="4022 英镑兑港币" class="to-link" target="_blank">
+                    4022 英镑兑港币                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/usb_thb/13b499982.html" title="5629 韩元兑泰铢" class="to-link" target="_blank">
+                    5629 韩元兑泰铢                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/jpy_krw/502c499493.html" title="441 日元兑英镑" class="to-link" target="_blank">
+                    441 日元兑英镑                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/usb_thb/506d499489.html" title="248 韩元兑港币" class="to-link" target="_blank">
+                    248 韩元兑港币                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/krw_thb/522b499473.html" title="1257 港币兑日元" class="to-link" target="_blank">
+                    1257 港币兑日元                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/eur_thb/93c499902.html" title="9356 美元兑泰铢" class="to-link" target="_blank">
+                    9356 美元兑泰铢                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/krw_thb/45e499950.html" title="8220 英镑兑泰铢" class="to-link" target="_blank">
+                    8220 英镑兑泰铢                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/hkd_jpy/542e499453.html" title="1668 英镑兑韩元" class="to-link" target="_blank">
+                    1668 英镑兑韩元                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/hkd_jpy/23b499972.html" title="5362 英镑兑韩元" class="to-link" target="_blank">
+                    5362 英镑兑韩元                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/krw_thb/43c499952.html" title="7689 泰铢兑港币" class="to-link" target="_blank">
+                    7689 泰铢兑港币                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/hkd_jpy/72a499923.html" title="6320 港币兑欧元" class="to-link" target="_blank">
+                    6320 港币兑欧元                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/usb_thb/27f499968.html" title="5013 泰铢兑欧元" class="to-link" target="_blank">
+                    5013 泰铢兑欧元                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/jpy_krw/07b499988.html" title="5151 英镑兑韩元" class="to-link" target="_blank">
+                    5151 英镑兑韩元                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/eur_thb/531d499464.html" title="5181 日元兑泰铢" class="to-link" target="_blank">
+                    5181 日元兑泰铢                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/jpy_krw/504c499491.html" title="3937 韩元兑欧元" class="to-link" target="_blank">
+                    3937 韩元兑欧元                </a>
+            </div>
+                        <div class="layui-col-md3 layui-col-xs4 conversion-list-item">
+                <a href="http://2309tz.top/eur_thb/91b499904.html" title="3051 美元兑港币" class="to-link" target="_blank">
+                    3051 美元兑港币                </a>
+            </div>
+                                </div>
+    </div>
+</div>
+        </div>
+
+        <div class="layui-col-md4">
+            
+<div class="layui-card">
+    <h2 class="title with-icon bor0">
+        <span class="header-icon">
+            <svg class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9915" width="18" height="18"><path d="M450.83136 967.169667c-27.334555 0-53.033867-10.644431-72.362075-29.972639L85.099678 643.826398c-19.36914-19.36914-30.014594-45.121664-29.973662-72.513524 0.040932-27.393907 10.762111-53.114708 30.188556-72.425519L534.031271 52.824089c5.726421-5.691629 12.413727-10.137895 19.8767-13.217023 7.462972-3.078105 15.33936-4.638647 23.412223-4.638647l329.499479 0c21.868053 0 42.427298 8.515954 57.889455 23.979134 15.462157 15.461133 23.979134 36.021401 23.979134 57.889455L988.688261 446.266903c0 8.104585-1.572822 16.010649-4.673439 23.497157-3.101641 7.489578-7.580652 14.192234-13.313214 19.921725L523.193435 937.197028C503.865227 956.524213 478.165916 967.169667 450.83136 967.169667zM577.320193 75.900667c-2.691295 0-5.316076 0.51984-7.804756 1.546216s-4.717442 2.509147-6.626931 4.406356L114.171808 527.916505c-11.656481 11.586896-18.088984 27.0204-18.113543 43.456744-0.024559 16.435321 6.362918 31.887244 17.984606 43.508933L407.412478 908.252813c11.597129 11.598152 27.01733 17.984606 43.418882 17.984606s31.821753-6.386454 43.418882-17.984606l447.51022-447.512267c1.911536-1.910513 3.403516-4.14439 4.438079-6.640234 1.034563-2.495844 1.557472-5.130857 1.557472-7.832386L947.756013 116.837009c0-10.93505-4.257977-21.214161-11.990079-28.946262-7.732102-7.732102-18.012236-11.990079-28.946262-11.990079L577.320193 75.900667z" p-id="9916" fill="#ffffff"></path><path d="M797.842679 310.237787c-47.396473 0-85.957721-38.560224-85.957721-85.957721s38.561247-85.957721 85.957721-85.957721 85.957721 38.560224 85.957721 85.957721S845.239152 310.237787 797.842679 310.237787zM797.842679 179.254593c-24.827455 0-45.025473 20.198018-45.025473 45.025473s20.198018 45.025473 45.025473 45.025473 45.025473-20.198018 45.025473-45.025473S822.670134 179.254593 797.842679 179.254593z" p-id="9917" fill="#ffffff"></path><path d="M412.920936 647.766127l-23.134907 23.134907-25.444509-25.444509 23.134907-23.134907c-28.081569-31.317263-40.694841-58.541301-37.878702-81.71407 1.998517-22.354124 9.486048-40.019459 22.479991-53.014424l31.806403 31.806403c-10.559497 10.559497-15.721053 21.644973-15.44783 33.258475 1.090844 12.467963 8.888438 27.570939 23.39278 45.309952l82.799798-82.799798c-18.304901-39.385009-25.955138-67.356061-22.99369-83.876316-0.38374-16.593933 7.15905-32.604582 22.588461-48.033993 17.845437-17.845437 37.564547-26.551726 59.157331-26.077935 21.552875 0.472767 44.598754 10.505261 69.099774 30.136368l24.352641-24.352641 25.444509 25.444509-24.352641 24.352641c22.917966 24.553209 33.769105 45.945425 32.516578 64.175625-2.109034 17.373693-8.451486 31.351032-18.99154 41.891086l-31.806403-31.807427c6.487761-6.487761 9.631358-13.884218 9.468652-22.190395-0.201591-8.3072-4.963035-17.937534-14.323217-28.933983l-84.017532 84.017532c17.321504 33.568537 26.208918 61.140499 26.702152 82.712817-0.490164 15.757892-7.632841 30.53341-21.425985 44.326555-18.683525 18.683525-38.822191 27.768437-60.375066 27.29567C460.77585 673.702845 436.511213 664.887063 412.920936 647.766127zM514.314207 561.641607l-3.981684-11.286044-71.841212 71.841212c11.812023 10.212596 24.372084 14.630209 37.621852 13.268188 11.593036 0.25378 22.700001-4.88731 33.258475-15.446807 8.92323-8.92323 13.301957-16.721847 13.175067-23.352871C523.163759 587.538417 520.420275 575.892169 514.314207 561.641607zM522.416745 477.203496l2.653433 7.525394 74.27668-74.275657c-12.668531-9.397021-25.62768-14.250562-38.893822-14.541181-11.631922-0.254803-23.5166 5.705955-35.693944 17.882276-4.870938 4.870938-8.452509 12.666484-10.685363 23.408129C512.58175 445.451328 515.363096 458.81059 522.416745 477.203496z" p-id="9918" fill="#ffffff"></path></svg>
+        </span>
+        <span class="text">中国银行外汇牌价</span>
+        <div class="tips">(以 100 单位外币兑换人民币,2025-09-21 00:00:05)</div>
+    </h2>
+    <table class="layui-table" style="margin-top: 0">
+        <thead>
+        <tr>
+            <th rowspan="2"><span>货币名称</span></th>
+            <th colspan="3"><span>现汇</span></th>
+        </tr>
+        <tr>
+            <th><span>买入价</span></th>
+            <th><span>卖出价</span></th>
+            <th><span>中间价</span></th>
+        </tr>
+        </thead>
+        <tbody>
+                <tr>
+            <td><a href="http://2309tz.top/usb_thb/03b499992.html">阿联酋迪拉姆</a></td>
+            <td>192.49</td>
+            <td>195.21</td>
+            <td>193.69</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/usb_thb/04a499991.html">澳大利亚元</a></td>
+            <td>467.76</td>
+            <td>471.48</td>
+            <td>470.59</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/krw_thb/567d499428.html">文莱元</a></td>
+            <td></td>
+            <td></td>
+            <td>554.43</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/usb_thb/554d499441.html">巴西里亚尔</a></td>
+            <td></td>
+            <td></td>
+            <td>134.1</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/eur_thb/52c499943.html">加拿大元</a></td>
+            <td>514.65</td>
+            <td>518.69</td>
+            <td>515.74</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/hkd_jpy/31e499964.html">瑞士法郎</a></td>
+            <td>891.47</td>
+            <td>898.36</td>
+            <td>897.87</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/jpy_krw/98c499897.html">捷克克朗</a></td>
+            <td></td>
+            <td></td>
+            <td>34.48</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/usb_thb/542e499453.html">丹麦克朗</a></td>
+            <td>111.62</td>
+            <td>112.52</td>
+            <td>112.35</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/jpy_krw/25c499970.html">欧元</a></td>
+            <td>833.36</td>
+            <td>839.47</td>
+            <td>838.34</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/hkd_jpy/24b499971.html">英镑</a></td>
+            <td>956.05</td>
+            <td>963.15</td>
+            <td>964.13</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/krw_thb/70c499925.html">港币</a></td>
+            <td>91.42</td>
+            <td>91.78</td>
+            <td>91.46</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/usb_thb/97e499898.html">匈牙利福林</a></td>
+            <td>2.1207</td>
+            <td>2.1635</td>
+            <td>2.1542</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/hkd_jpy/28a499967.html">印尼卢比</a></td>
+            <td>0.0425</td>
+            <td>0.0433</td>
+            <td>0.0431</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/eur_thb/03b499992.html">以色列谢克尔</a></td>
+            <td></td>
+            <td></td>
+            <td>213.02</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/eur_thb/37a499958.html">印度卢比</a></td>
+            <td></td>
+            <td></td>
+            <td>8.0645</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/eur_thb/562d499433.html">日元</a></td>
+            <td>4.7935</td>
+            <td>4.8306</td>
+            <td>4.8076</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/eur_thb/515c499480.html">柬埔寨瑞尔</a></td>
+            <td></td>
+            <td></td>
+            <td>0.1776</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/eur_thb/11d499984.html">韩国元</a></td>
+            <td>0.5074</td>
+            <td>0.513</td>
+            <td>0.512</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/eur_thb/510d499485.html">科威特第纳尔</a></td>
+            <td></td>
+            <td></td>
+            <td>2330.41</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/usb_thb/3b499992.html">蒙古图格里克</a></td>
+            <td>0.184</td>
+            <td>0.2118</td>
+            <td>0.1978</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/krw_thb/566f499429.html">澳门元</a></td>
+            <td>88.75</td>
+            <td>89.16</td>
+            <td>88.75</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/usb_thb/548b499447.html">墨西哥比索</a></td>
+            <td>38.3</td>
+            <td>39.08</td>
+            <td>38.71</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/usb_thb/26b499969.html">林吉特</a></td>
+            <td>168.65</td>
+            <td>170.17</td>
+            <td>169.41</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/jpy_krw/534b499461.html">挪威克朗</a></td>
+            <td>71.29</td>
+            <td>71.87</td>
+            <td>72.02</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/usb_thb/59b499936.html">尼泊尔卢比</a></td>
+            <td></td>
+            <td></td>
+            <td>5.0454</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/hkd_jpy/42f499953.htmll">新西兰元</a></td>
+            <td>415.59</td>
+            <td>418.72</td>
+            <td>418.8</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/krw_thb/79e499916.html">菲律宾比索</a></td>
+            <td>12.38</td>
+            <td>12.63</td>
+            <td>12.44</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/hkd_jpy/519f499476.html">巴基斯坦卢比</a></td>
+            <td></td>
+            <td></td>
+            <td>2.507</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/jpy_krw/556c499439.html">卡塔尔里亚尔</a></td>
+            <td></td>
+            <td></td>
+            <td>195.17</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/krw_thb/549f499446.html">塞尔维亚第纳尔</a></td>
+            <td>7.065</td>
+            <td>7.2078</td>
+            <td>7.1517</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/hkd_jpy/29a499966.html">卢布</a></td>
+            <td>8.21</td>
+            <td>8.63</td>
+            <td>8.55</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/usb_thb/04a499991.html">沙特里亚尔</a></td>
+            <td>188.52</td>
+            <td>191.18</td>
+            <td>189.69</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/hkd_jpy/538b499457.html">瑞典克朗</a></td>
+            <td>75.36</td>
+            <td>75.96</td>
+            <td>76.1</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/jpy_krw/91b499904.html">新加坡元</a></td>
+            <td>552.18</td>
+            <td>556.34</td>
+            <td>554.75</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/krw_thb/7b499988.html">泰国铢</a></td>
+            <td>22.31</td>
+            <td>22.45</td>
+            <td>22.3</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/hkd_jpy/03b499992.html">土耳其里拉</a></td>
+            <td>16</td>
+            <td>18.4</td>
+            <td>17.19</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/hkd_jpy/55b499940.html">新台币</a></td>
+            <td></td>
+            <td></td>
+            <td>23.57</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/eur_thb/533e499462.htmll">美元</a></td>
+            <td>710.89</td>
+            <td>713.88</td>
+            <td>711.28</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/eur_thb/94e499901.html">越南盾</a></td>
+            <td></td>
+            <td></td>
+            <td>0.027</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/hkd_jpy/554d499441.html">南非兰特</a></td>
+            <td>40.84</td>
+            <td>41.31</td>
+            <td>40.98</td>
+        </tr>
+                <tr>
+            <td><a href="http://2309tz.top/krw_thb/595f499400.html">人民币</a></td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+        </tr>
+                </tbody>
+    </table>
+</div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="inner">
+        <div class="footer-box">
+            <div class="bd">
+                <p>
+                    Copyright ©  2025 181353.com All Rights Reserved.
+                                    </p>
+                
+                
+                
+                
+                
+                </p>
+                	<ul>
+					<li><a href="http://gsfqf.yibatong.cn" target="_blank"></a></li>
+					<li><a href="http://mmlsl.qwv.cc" target="_blank"></a></li>
+					<li><a href="http://fjomv.qwv.cc" target="_blank"></a></li>
+					<li><a href="http://mszwb.ruiyisi.cn" target="_blank"></a></li>
+					<li><a href="http://zvjxb.txaeu.cn" target="_blank"></a></li>
+					<li><a href="http://gcbkv.qwv.cc" target="_blank"></a></li>
+					<li><a href="http://gtjyb.cgsiu.cn" target="_blank"></a></li>
+					<li><a href="http://uvyjf.brtest.com.cn" target="_blank"></a></li>
+					<li><a href="http://00064.yibatong.cn" target="_blank"></a></li>
+					<li><a href="http://ngctd.chenxirenli.com" target="_blank"></a></li>
+							<li><a href="http://www.ybjk888.cn/" target="_blank">美元兑人民币实时行情</a></li>
+					<li><a href="http://www.pintao888.cn/" target="_blank">中国银行牌价_中国银行今日外汇牌价_中国银行外汇汇率查询</a></li>
+					<li><a href="http://www.ngoos.cn/" target="_blank">欧元今明后三天汇率</a></li>
+					<li><a href="http://www.ycshengxueti.com.cn/" target="_blank">美元兑人民币(USDCNY)_外汇</a></li>
+					<li><a href="http://www.cbenzinglive.cn/" target="_blank">今日外汇牌价</a></li>
+					<li><a href="http://www.capcstec.org.cn/" target="_blank">人民币汇率走势图</a></li>
+					<li><a href="http://www.fyah.xyz/" target="_blank">10万人民币可以移民哪个国家</a></li>
+					<li><a href="http://www.ufyqt.com/" target="_blank">外汇牌价_外汇汇率查询_今日人民币外汇牌价表</a></li>
+					<li><a href="http://www.zgxjjt.asia/" target="_blank">美金与人民币兑</a></li>
+					<li><a href="http://www.kiuy123.cn/" target="_blank">2026欧元可能即将迎来大幅反弹吗</a></li>
+		
+	</ul>
+                <p>本站不提供任何金融交易服务，提供的行情数据以及其它资料仅作为用户获取信息之目的，并不构成投资建议和投资依据。</p>
+                <p>因信息残缺、延时、错误所产生任何后果概不承担任何责任。市场有风险，投资需谨慎。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 100) {
+                $(".fixed-btn").fadeIn(1500);
+            } else {
+                $(".fixed-btn").fadeOut(1500);
+            }
+        });
+        $(".go-top").click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 1000);
+            return false;
+        });
+    });
+</script>
+
+<script src="/view/huilv_zh/static/js/highcharts.js"></script>
+<script src="/view/huilv_zh/static/js/exporting.js"></script>
+<script src="/view/huilv_zh/static/js/oldie.js"></script>
+<script src="/view/huilv_zh/static/js/highcharts-zh_CN.js"></script>
+<script>
+    Highcharts.setOptions({ global: { useUTC: false } });
+    fetch('/index.php?huilv-quxian-from-CNY-to-KRW.html')
+        .then(response => response.json())
+        .then(data => {
+            const chart = Highcharts.chart('chart-container', {
+                credits:{
+                    text: '在线实时汇率换算工具',
+                    href: 'https://181353.com/'
+                },
+                title: {
+                    text: '人民币兑韩元汇率走势图'
+                },
+                subtitle: {
+                    text: ''
+                },
+                xAxis: {
+                    type: 'datetime',
+                    dateTimeLabelFormats: {
+                        millisecond: '%H:%M:%S.%L',
+                        second: '%H:%M:%S',
+                        minute: '%H:%M',
+                        hour: '%H:%M',
+                        day: '%m-%d',
+                        week: '%m-%d',
+                        month: '%Y-%m',
+                        year: '%Y'
+                    }
+                },
+                tooltip: {
+                    dateTimeLabelFormats: {
+                        millisecond: '%H:%M:%S.%L',
+                        second: '%H:%M:%S',
+                        minute: '%H:%M',
+                        hour: '%H:%M',
+                        day: '%Y-%m-%d',
+                        week: '%m-%d',
+                        month: '%Y-%m',
+                        year: '%Y'
+                    }
+                },
+                yAxis: {
+                    title: {
+                        text: ''
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                plotOptions: {
+                    area: {
+                        fillColor: {
+                            linearGradient: {
+                                x1: 0,
+                                y1: 0,
+                                x2: 0,
+                                y2: 1
+                            },
+                            stops: [
+                                [0, new Highcharts.getOptions().colors[0]],
+                                [1, new Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                            ]
+                        },
+                        marker: {
+                            radius: 2
+                        },
+                        lineWidth: 1,
+                        states: {
+                            hover: {
+                                lineWidth: 1
+                            }
+                        },
+                        threshold: null
+                    }
+                },
+                series: [{
+                    type: 'area',
+                    name: '人民币兑韩元汇率',
+                    data: data
+                }]
+            });
+        })
+        .catch(error => {
+            console.error('Error loading data:', error);
+        });
+</script>
+</body>
+</html>

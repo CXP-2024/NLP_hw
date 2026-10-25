@@ -1,0 +1,15 @@
+Mini Web Corpus: raw Common Crawl pages
+
+These 100 files are byte-identical archived HTML response bodies from the
+source URLs listed in SOURCES.json. They are bundled for this course without
+modification. No single license is asserted for the collection, and inclusion
+does not transfer ownership or relicense source content.
+
+Common Crawl supplied the archived copies but does not grant a license to the
+underlying web content. Its terms are available at:
+
+https://commoncrawl.org/terms-of-use
+
+Source-specific rights and source URLs are recorded for every document in
+SOURCES.json. Review the applicable source terms before reuse or redistribution
+outside the course. The files contain no instructor-authored fixture additions.
