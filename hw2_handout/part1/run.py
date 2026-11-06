@@ -34,6 +34,21 @@ def main(args):
         assert args.pretrain_corpus_path is not None
         assert args.outputs_path is not None
         ### TODO: Implement pretraining, you can refer this setup in train.py
+        os.makedirs(args.outputs_path, exist_ok=True)
+        ckpt_path = os.path.join(args.outputs_path, 'pretrain.pt')
+
+        tconf = TrainerConfig(
+            max_epochs=650,
+            batch_size = 128,
+            learning_rate = args.pretrain_lr,
+            lr_decay=True,
+            warmup_tokens=512*20,
+            final_tokens=650*len(pretrain_dataset)*block_size,
+            num_workers=4,
+            ckpt_path=ckpt_path,
+        )
+        trainer = Trainer(model, pretrain_dataset, None, tconf, args.device)
+        trainer.train()
         ### TODO[Optional]: change hyperparameters for ablation study
         # max_epochs=650
         # batch_size=128
@@ -80,6 +95,31 @@ def main(args):
     #         writer=writer
         #     You can use the args.reading_params_path flag to switch between the
         #     number of epochs for each case.
+        os.makedirs(args.outputs_path, exist_ok=True)
+
+        if args.reading_params_path is not None:
+            model.load_state_dict(torch.load(args.reading_params_path))
+            max_epochs = 10
+            write_path = os.path.join(args.outputs_path, 'finetune_with_pretrained.pt')
+        else:
+            max_epochs = 75
+            write_path = os.path.join(args.outputs_path, 'finetune_without_pretrained.pt')
+
+        finetune_text = open(args.finetune_corpus_path, encoding='utf-8').read()
+        finetune_dataset = dataset.NameDataset(pretrain_dataset, finetune_text)
+
+        tconf = TrainerConfig(
+            max_epochs=max_epochs,
+            batch_size=256,
+            learning_rate=args.finetune_lr,
+            lr_decay=True,
+            warmup_tokens=512 * 20,
+            final_tokens=200 * len(pretrain_dataset) * block_size,
+            num_workers=4,
+            ckpt_path=write_path,
+        )
+        trainer = Trainer(model, finetune_dataset, None, tconf, args.device)
+        trainer.train() 
         
 
     elif args.function == 'evaluate':
@@ -118,6 +158,8 @@ def parse_args():
     parser.add_argument('--reading_params_path', type=str, default=None)
     parser.add_argument('--eval_corpus_path', type=str, default=None)
     parser.add_argument('--device', type=str, default='cpu')
+    parser.add_argument('--pretrain_lr', type=float, default=6e-3)
+    parser.add_argument('--finetune_lr', type=float, default=6e-4)
     return parser.parse_args()
 
 if __name__ == "__main__":

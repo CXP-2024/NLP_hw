@@ -35,7 +35,28 @@ class CausalSelfAttention(nn.Module):
         B, T, C = x.size()
 
         ## TODO: Implement causal self attention
-        raise NotImplementedError
+        # obtain the key, query, and value projections to multiple heads: B, T, n_head, C // n_head
+        k = self.key(x).view(B, T, self.n_head, C // self.n_head)
+        q = self.query(x).view(B, T, self.n_head, C // self.n_head)
+        v = self.value(x).view(B, T, self.n_head, C // self.n_head)
+
+        # transpose the q to B, n_head, T, C // n_head, then compute q @ k^T: B, n_head, T, T
+        q = q.transpose(1, 2)  # B, n_head, T, C // n_head
+        k = k.transpose(1, 2)  # B, n_head, T, C // n_head
+        v = v.transpose(1, 2)  # B, n_head, T, C // n_head
+
+        # compute attention scores: B, n_head, T, T
+        att = (q @ k.transpose(-2, -1)) * (1.0 / math.sqrt(k.size(-1))) # norm by the dimension of the key vectors 
+        att = att.masked_fill(self.mask[:, :, :T, :T] == 0, float('-inf'))
+        att = F.softmax(att, dim=-1)  
+        att = self.attn_drop(att)
+
+        # apply attention to values
+        y = att @ v # B, n_head, T, C // n_head
+        y = y.transpose(1, 2).contiguous().view(B, T, C) # B, T, C
+
+        #  output projection
+        y = self.resid_drop(self.proj(y)) 
         ### TODO END
         
         return y

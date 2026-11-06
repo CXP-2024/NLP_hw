@@ -99,7 +99,31 @@ class CharCorruptionDataset(Dataset):
     def __getitem__(self, idx):
         # TODO [part e]: see spec above
         ### YOUR CODE HERE ###
-        pass
+        PAD = self.PAD_CHAR
+        MASK = self.MASK_CHAR
+
+        doc = self.data[idx]
+        upper = min(len(doc), int(self.block_size * 7 / 8))
+        L =  random.randint(4, upper)
+        doc = doc[:L]
+
+        mask_len = random.randint(1, L // 2 - 1)
+        start = random.randint(0, L - mask_len)
+
+        prefix = doc[:start]
+        masked = doc[start:start+mask_len]
+        suffix = doc[start+mask_len:]
+
+        concat = prefix + MASK + suffix + MASK + masked + MASK
+        concat = concat + PAD * (self.block_size + 1 - len(concat))
+
+        x = concat[:-1]
+        y = concat[1:]
+        x = torch.tensor([self.stoi[c] for c in x], dtype=torch.long)
+        y = torch.tensor([self.stoi[c] for c in y], dtype=torch.long)
+
+        return x, y
+
         ### END YOUR CODE ###
 
 
@@ -156,17 +180,17 @@ if __name__ == '__main__':
     if args.dataset_type == 'namedata':
         # Even if it hasn't been implemented, we use it to define the vocab
         corruption_dataset = CharCorruptionDataset(
-            open('wiki.txt', encoding='utf-8').read(), 128)
+            open('dataset/pretrain/wiki.txt', encoding='utf-8').read(), 128)
         # Make the name dataset
         name_dataset = NameDataset(corruption_dataset,
-            open('birth_places_train.tsv', encoding='utf-8').read())
+            open('dataset/finetune/birth_places_train.tsv', encoding='utf-8').read())
         for _, example in zip(range(4), name_dataset):
             x, y = example
             print('x:', ''.join([name_dataset.itos[int(c)] for c in x]))
             print('y:', ''.join([name_dataset.itos[int(c)] for c in y]))
     elif args.dataset_type == 'charcorruption':
         corruption_dataset = CharCorruptionDataset(
-            open('wiki.txt', encoding='utf-8').read(), 128)
+            open('dataset/pretrain/wiki.txt', encoding='utf-8').read(), 128)
         for _, example in zip(range(4), corruption_dataset):
             x, y = example
             print('x:', ''.join([corruption_dataset.itos[int(c)] for c in x]))

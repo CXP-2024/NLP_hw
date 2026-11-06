@@ -2,7 +2,8 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-import part1.attention as attention
+# import part1.attention as attention
+import attention
 
 torch.manual_seed(0)
 
@@ -34,12 +35,20 @@ class Block(nn.Module):
 
     def __init__(self, config):
         super().__init__()
-        ### TODO: Implement the Block class
-        raise NotImplementedError
+        # 2 LayerNorm layers and 1 atten and 1 mlp
+        self.ln1 = nn.LayerNorm(config.n_embd)
+        self.ln2 = nn.LayerNorm(config.n_embd)
+        self.attn = attention.CausalSelfAttention(config)
+        self.mlp = nn.Sequential(
+            nn.Linear(config.n_embd, 4 * config.n_embd),
+            nn.GELU(),
+            nn.Linear(4 * config.n_embd, config.n_embd),
+            nn.Dropout(config.resid_pdrop)
+        )
 
     def forward(self, x):
-        ### TODO: Implement the forward pass, you can try post-norm or pre-norm here
-        raise NotImplementedError
+        x = x + self.attn(self.ln1(x))
+        x = x + self.mlp(self.ln2(x))
         return x
 
 class GPT(nn.Module):
@@ -82,9 +91,16 @@ class GPT(nn.Module):
         assert t <= self.block_size, f"Cannot forward, model block size ({t}, {self.block_size}) is exhausted."
 
         # TODO: Implement the forward pass
-        
-        # TODOEND
-        logits = None
+        token_embed = self.tok_emb(idx)  # (b, t, n_embd)
+        if not self.rope: # add pos embed
+            token_embed = token_embed + self.pos_emb[:, :t, :]
+        x =  self.drop(token_embed)
+        x =  self.blocks(x)
+        x =  self.ln_f(x)
+        logits = self.head(x)
         loss = None
+        if targets is not None:
+            # reshape logits from (b, t, vocab_size) to (b*t, vocab_size) and targets from (b, t) to (b*t,)
+            loss = F.cross_entropy(logits.view(-1, logits.size(-1)), targets.view(-1), ignore_index=0)
 
         return logits, loss
