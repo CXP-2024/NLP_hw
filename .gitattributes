@@ -1,0 +1,2 @@
+# JSONL outputs must keep LF line endings regardless of core.autocrlf.
+*.jsonl text eol=lf

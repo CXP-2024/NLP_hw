@@ -1,0 +1,19 @@
+# Python caches
+__pycache__/
+*.pyc
+
+# Large / regenerable training outputs
+hw2_handout/part1/output/*.pt
+hw2_handout/part1/output/*.log
+
+# LaTeX build products
+*.aux
+*.log
+*.out
+yourname_hw2_submit/answer.pdf
+
+# Packed submissions
+*.zip
+
+# Part 3 is run locally only and is not part of the submission
+part3_local_results/

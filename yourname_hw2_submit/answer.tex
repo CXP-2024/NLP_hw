@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\newcommand{\MASK}{\ensuremath{?\!?}}
+\newcommand{\PAD}{\ensuremath{\square}}
+
+\title{NLP Assignment 2: Solutions}
+\author{PAN CHANGXUN\\Student ID: 2024011323}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\section*{Part 1: Pretrain Transformer}
+
+\subsection*{(b) Model}
+
+A decoder-only Transformer (GPT style) with
+4 layers, 8 attention heads, embedding size 256 (32 per head),
+block size 128, and a character vocabulary of 256 symbols
+(3{,}323{,}392 parameters).
+Each block uses pre-norm residual connections,
+\[
+x \leftarrow x + \mathrm{Attn}(\mathrm{LN}_1(x)),\qquad
+x \leftarrow x + \mathrm{MLP}(\mathrm{LN}_2(x)),
+\]
+where the MLP is $\mathrm{Linear}(256,1024)\to\mathrm{GELU}\to\mathrm{Linear}(1024,256)\to\mathrm{Dropout}$.
+Attention is scaled dot-product attention with a causal mask, filled with
+$-\infty$ before the softmax.
+The loss is the cross-entropy (log-softmax + NLL) over all positions,
+ignoring the padding character (\texttt{ignore\_index=0}).
+Dropout is 0.1 everywhere.
+
+% TODO (optional): one or two sentences on why you chose pre-norm,
+% or on the role of the causal mask.
+
+\subsection*{(c) Finetuning without pretraining}
+
+Trained on \texttt{birth\_places\_train.tsv} (2000 examples) from random
+initialisation: 75 epochs, batch size 256, learning rate $6\times10^{-4}$
+with linear warm-up and cosine decay. Training loss went from 3.49 to 0.31.
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+ & Dev accuracy \\
+\midrule
+Finetune without pretraining & \textbf{2.0\%} (10 / 500) \\
+Always predict ``London'' & 5.0\% (25 / 500) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The model's most frequent predictions were London (53), Paris (21) and
+Chicago (18), the most common birthplaces in the training set.
+
+% TODO: explain in your own words why accuracy is this low. Points to cover:
+% the dev people never appear in the finetuning data; the training loss is low
+% but the model is memorising; it falls back to frequent places, and does no
+% better than the trivial London baseline.
+
+\subsection*{(d) Pretraining with span corruption}
+
+\texttt{CharCorruptionDataset.\_\_getitem\_\_} builds each example as follows:
+\begin{enumerate}
+  \item Take document \texttt{idx} and truncate it to a random length
+        $L\in[4,\min(112,\,|\text{doc}|)]$, keeping its beginning.
+  \item Draw a span length $m\in[1,\lfloor L/2\rfloor-1]$ (mean $\approx L/4$)
+        and a start position $s\in[0,L-m]$, splitting the text into
+        prefix, masked content and suffix.
+  \item Form \texttt{prefix \MASK{} suffix \MASK{} masked \MASK{}} and pad with \PAD{}
+        to length 129; then $x$ is the string without its last character
+        and $y$ the string without its first.
+\end{enumerate}
+Over 5 passes of the corpus (14{,}685 samples) the measured truncation lengths
+covered the full range 4--112 and the masked span averaged 24.4\% of the
+truncated text.
+
+Pretraining: 650 epochs on \texttt{wiki.txt}, batch size 128, learning rate
+$6\times10^{-3}$ with warm-up and cosine decay. It was run on a GPU
+(RTX 5080) and finished in under 20 minutes. Training loss:
+
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+Epoch & 1 & 100 & 300 & 500 & 650 \\
+\midrule
+Loss & 3.45 & 1.40 & 0.81 & 0.58 & 0.52 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% TODO: explain the design choices in your own words: why the third MASK
+% matches the finetuning format "question MASK place MASK"; why truncating
+% from the start keeps the name and birthplace in the same window.
+
+\subsection*{(e) Finetuning the pretrained model}
+
+Starting from the pretrained weights: 10 epochs, batch size 256, learning rate
+$6\times10^{-4}$. Training loss went from 0.78 (epoch 1) to 0.16 (epoch 10).
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+ & Dev accuracy \\
+\midrule
+Finetune without pretraining & 2.0\% (10 / 500) \\
+Pretrain, then finetune & \textbf{24.4\%} (122 / 500) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Examples that only the pretrained model answers correctly:
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+Person & Gold & Without pretraining & With pretraining \\
+\midrule
+Ralf Wadephul & Berlin & Paris & Berlin \\
+Joseph Baggaley & England & Boston & England \\
+Alfred Mele & Detroit & England & Detroit \\
+Ernst Florian Winter & Vienna & Dallas & Vienna \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% TODO: analysis in your own words: where the knowledge comes from (these
+% people appear in wiki.txt but not in the finetuning data); what pretraining
+% teaches versus what finetuning teaches; why the first-epoch loss is already
+% much lower; and why accuracy is still far from 100%.
+
+\end{document}
